@@ -5,7 +5,7 @@
 - keep track of changes in any type sof document: txt, table, images
 
 ## Conflicts in version control
-- Conflict happens when someone changes the same part of a document at the same time
+- Conflict happens when someone (yourself or someone else) changes the same part of a document at the same time
 
 ## What is a commit 
 - saves the changes made to files to a repository
@@ -33,6 +33,6 @@ hint: 'development'. The just-created branch can be renamed via this command:
 hint: 
 hint:         git branch -m <name>
 ```
-
+bla bla
 
 

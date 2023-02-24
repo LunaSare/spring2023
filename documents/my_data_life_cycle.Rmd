@@ -1,0 +1,24 @@
+---
+title: "The Data Life Cycle"
+author: "Luna L Sanchez Reyes"
+date: "2023-02-21"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+James' Waterford plan
+
+1. Plan: Do background research to decide if you have enough resources and information to begin collecting data.
+1. Collection: Collect data from the sources you found in your plan.
+1. Process: Raw data needs to be cut down and prepared via a coding program.
+1. Analyze: Usually I will have some preliminary results. At this point, I have someone double check  the conclusions that my data suggests.
+1. Visualize: Refine your results with clear, comprehensible graphs. 
+1. Publish: Store and share my results. 
+
+
+- This
+- is
+- unnumbered
+* list

@@ -1,0 +1,128 @@
+---
+title: "UHURU data set visualization"
+author: "Luna L Sanchez Reyes"
+date: "2023-02-23"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## A tip  for working with Rmarkdown
+The Working directory inside this Rmarkdown r chunk is the following:
+```{r eval = TRUE}
+getwd()
+```
+
+Note: remember that working directories in a project and an R chunk are not always the same!
+
+## 1. Describing the working data set
+
+UHURU data set
+
+```{r eval = FALSE}
+knitr::include_graphics("https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FVachellia&psig=AOvVaw28QPvz2xvS6ULO7dQ-KDSD&ust=1677282495186000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLiomqzqrP0CFQAAAAAdAAAAABAE")
+```
+
+
+
+## 2. Reading the data set
+
+We are reading a data set in TSV format. This is a "tab separated values" file.
+To read it into R we use the function `read.csv()`  with the `sep =` argument set to `"\t"` which represents a tab in computer language.
+
+```{r eval = TRUE, results='hide'}
+read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt", sep = "\t")
+```
+
+Assign the data to a variable so we can work with it
+
+```{r eval = TRUE}
+acacia <- read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt", sep = "\t")
+```
+
+## 3. Acessing elements of a `data.frame`
+
+It is similar to what we do for vectors, but we have two dimensions
+
+```{r}
+
+numbers <- 1:10
+numbers
+numbers[3:6]
+numbers[c(1,5,7,3)]
+
+acacia[,6]
+str(acacia)
+```
+
+All the following are different ways of accessing a column or variable inside a data frame
+
+```{r}
+acacia$SURVEY
+acacia[, 1]
+acacia[ , "SURVEY"]
+```
+
+### Replacing elements in a data.frame
+
+First we locate the element that we want to replace
+```{r}
+numbers[5] <- 100
+numbers
+```
+
+## 4. Quality Control check
+
+Check that everything is the correct class and type
+```{r}
+head(acacia)
+str(acacia)
+class(acacia$HEIGHT)
+is.numeric(acacia$HEIGHT)
+acacia$HEIGHT
+as.numeric(acacia$HEIGHT)
+```
+
+We identified that HEIGHT should be numeric and is insetad character:
+
+```{r}
+acacia$HEIGHT <- as.numeric(acacia$HEIGHT)
+acacia$HEIGHT
+```
+
+Coercion in R computer language means that a value was forced to be a type, in this case, the word "Dead" cannot be trasnformed to a number, so it is assigned the NA value
+
+
+```{r}
+acacia <- read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt",
+         sep = "\t",
+         na.strings = "dead")
+is.numeric(acacia$HEIGHT)
+head(acacia)
+# View(acacia)
+```
+
+## 5. Plotting data with `ggplot2`
+
+Regular way to plot in R
+```{r}
+plot(x = acacia$HEIGHT, y = acacia$AXIS1, main = "Acacia height vs axis1")
+?legend
+```
+
+With ggplot, we create layers
+
+```{r}
+library(ggplot2)
+
+ggplot(data = acacia, mapping = aes(x = HEIGHT, y = AXIS1, color = TREATMENT)) +
+  geom_point(size = 5) +
+  labs(x = "Tree height", y = "Tree axis 1", title = "Acacia tree size relationships") 
+
+```
+
+```{r}
+colors()
+```

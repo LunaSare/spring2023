@@ -7,14 +7,22 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
 ```
 
-## Read raw ndata in
+## Read raw data in
+
+<!--
+whatever I do not want rendered
+-->
+```{r echo = FALSE}
+# some words for myself
+```
 
 We are working with the file `ACACIA_DREPANOLOBIUM_SURVEY.txt` file that currently lives in the `data-raw` folder.
 
 ```{r eval=TRUE}
-#make sure to provide file name as relative path
+# make sure to provide file name as relative path
 read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt",
          sep = "\t",
          na.strings = "dead") -> acacia
@@ -28,8 +36,14 @@ head(acacia)
 For this we use the function `geom_point()`
 
 ```{r}
-library(ggplot2)
 ggplot(data = acacia, mapping = aes(x = HEIGHT, y = FRUITS, color = ANT)) +
   geom_point(size = 3, alpha = 0.5) +
   facet_wrap(~ANT)
 ```
+### Exercise 1.
+
+Create a scatterplot of circumgerence vs height
+```{r}
+
+```
+

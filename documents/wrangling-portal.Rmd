@@ -1,0 +1,124 @@
+---
+title: "Portal data set"
+author: "Luna L Sanchez Reyes"
+date: "2023-03-02"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# install.packages("dplyr")
+library(dplyr)
+```
+
+## 1. Intro to the Portal data set
+
+Homework: create an intro describing the location of the experiment and the different experimental treatments.
+Paper here https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/15-2115.1
+
+## 2. Load the data sets and create three data frames
+
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys.csv")
+head(surveys)
+species <- read.csv(file = "../data-raw/species.csv")
+head(species)
+plots <- read.csv(file = "../data-raw/plots.csv")
+head(plots)
+```
+
+------
+
+## 3. The `dplyr` package for data wrangling 
+
+### Subset columns from a data.frame wth the funvtion `select()`
+
+```{r}
+head(surveys)
+surveys_subset <- select(surveys, month, day, year)
+
+```
+
+------
+
+### Create new variables from existing variables or transform existing variables with `mutate()`
+
+The hindfoot_length variable is measured in mm. I want a new variable that stores hindfoot length in cm.
+
+```{r}
+mutate(head(surveys), hindfoot_length_cm = hindfoot_length/10)
+```
+
+
+```{r}
+head(surveys)
+```
+
+```{r}
+surveys_mutated <- mutate(surveys, hindfoot_length_cm = hindfoot_length/10)
+head(surveys_mutated)
+```
+
+------
+
+### Sorting or ordering data with the function `arrange()`
+
+If we want to order the data frame values based on the weight variable:
+
+```{r}
+surveys_arranged <- arrange(surveys, weight)
+head(surveys_arranged)
+```
+Order values in descendant order with the function `desc()`
+
+```{r}
+surveys_arranged <- arrange(surveys, desc(weight))
+head(surveys_arranged)
+```
+
+------
+
+### Filter values with the function `filter()`
+
+Filter the data frame to keep rows with weight values that are equal to 4:
+
+```{r}
+filter(surveys, weight == 4)
+surveys_filtered <- filter(surveys, weight != 4)
+head(surveys_filtered)
+surveys_filtered <- filter(surveys, weight > 200)
+head(surveys_filtered)
+```
+
+------
+
+### Filter with more complex conditions
+
+I want values that have weight larger than 200 AND also are females
+
+```{r}
+surveys_filtered <- filter(surveys, weight > 200, sex == "F")
+head(surveys_filtered)
+surveys_filtered <- filter(surveys, weight > 200 & sex == "F")
+head(surveys_filtered)
+```
+
+```{r, results='hide'}
+surveys_filtered <- filter(surveys, weight > 200 | sex == "F")
+head(surveys_filtered)
+```
+
+------
+
+### Filtering `NA` values
+
+`NA` is a special valie in R. We can't use logical statements with it, we have to use the `is.na()` function:
+
+```{r}
+surveys_filtered <- filter(surveys, !is.na(weight))
+head(surveys_filtered)
+```
+
+
+
+

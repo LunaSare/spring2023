@@ -1,0 +1,133 @@
+---
+title: "Data manipulation with pipes"
+author: "Luna L Sanchez Reyes"
+date: "2023-03-07"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(magrittr)
+```
+
+## The classic way of running code
+
+For example I want the square root of the mean of a sequence of numbers
+
+### Nested code
+
+```{r}
+numbers <- 1:300
+mean(numbers)
+sqrt(mean(numbers))
+```
+
+### Sequential code
+
+In this case we create intermediate variables
+```{r}
+numbers <- -300:546
+numbers <- 1:300
+numbers_mean <- mean(numbers)
+sqrt(x = numbers_mean)
+```
+
+## Piping code
+
+It can be implemented in R using the package `magrittr`. It is a dependency of `dplyr`, so it is installed along.
+
+```{r}
+library(magrittr)
+```
+
+The original symbol of the pipe is `%>%`.
+But we also have a new symbol that is similar to bash `|>`
+The purpose of pipes is to eliminate or reduce to the max the need of intermediate variables.
+For the mean example
+
+```{r}
+1:300 %>% mean() %>% sqrt()
+```
+
+### Pipes with the surveys data set
+
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys.csv")
+str(surveys)
+```
+
+Calculate the mean of the year column using pipes
+```{r}
+surveys$year %>% mean()
+```
+Calculate the mean of the weight column:
+```{r}
+surveys$weight %>% mean(na.rm = TRUE)
+# ?mean
+```
+## Exercise 1
+
+1. Load surveys.csv into R using read.csv().
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys.csv")
+```
+
+2. Use select() to create a new data frame object called surveys1 with just the year, month, day, and species_id columns in that order.
+```{r}
+surveys1 <- select(surveys, year, month, day, species_id)
+str(surveys1)
+```
+
+3. Create a new data frame called surveys2 with the year, species_id, and weight in kilograms of each individual, with no null weights. Use mutate(), select(), and filter() with !is.na(). The weight in the table is given in grams so you will need to create a new column called “weight_kg” for weight in kilograms by dividing the weight column by 1000.
+```{r}
+surveys2 <- select(surveys, year, species_id, weight)
+str(surveys2)
+```
+
+```{r}
+surveys2 <- mutate(surveys2, weight_kg = weight/1000)
+str(surveys2)
+```
+
+```{r}
+surveys2 <- filter(surveys2, !is.na(weight_kg))
+str(surveys2)
+```
+```{r}
+surveys2 <- select(surveys2, year, species_id, weight_kg)
+colnames(surveys2)
+# surveys2[ , c(1,3)]
+# surveys2[ , c("year", "weight_kg")]
+```
+
+
+
+4. Use the filter() function to get all of the rows in the data frame surveys2 for the species ID “SH”.
+
+```{r}
+surveys2_filtered <- filter(surveys2, species_id == "SH")
+str(surveys2_filtered)
+```
+## Exercise 2
+
+Redo all of the above but using pipes
+
+```{r}
+read.csv(file = "../data-raw/surveys.csv") %>% # Read the data set
+  select(year, month, day, species_id) -> surveys1 # select columns and assign to object
+
+# name_object <- code that we want to run  
+str(surveys1)
+```
+
+```{r}
+surveys %>% select(year, species_id, weight) %>%
+  mutate(weight_kg = weight/1000) %>%
+  filter(!is.na(weight)) %>%
+  select(year, species_id, weight_kg) %>%
+  filter(species_id == "SH") -> surveys_final
+
+str(surveys_final)
+```
+

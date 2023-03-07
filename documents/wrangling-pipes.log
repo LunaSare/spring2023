@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.12)  7 MAR 2023 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.12)  7 MAR 2023 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**visualization-homework.tex
-(./visualization-homework.tex
+**wrangling-pipes.tex
+(./wrangling-pipes.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex
 /base/article.cls
@@ -358,8 +358,8 @@ Package: xurl 2022/01/09 v 0.10 modify URL breaks
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box54
-) (./visualization-homework.aux)
-\openout1 = `visualization-homework.aux'.
+) (./wrangling-pipes.aux)
+\openout1 = `wrangling-pipes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
 LaTeX Font Info:    ... okay on input line 110.
@@ -510,81 +510,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-20.
+23.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-134.
+211.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Overfull \hbox (76.2434pt too wide) in paragraph at lines 209--209
-[]\T1/lmtt/m/n/10 ##  $ SPECIES     : chr [1:7508] "Acacia_etbaica" "Acacia_etb
-aica" "Acacia_etbaica" "Acacia_etbaica" ...[] 
- []
-
-[1
+) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-[4]
-<visualization-homework_files/figure-latex/unnamed-chunk-7-1.pdf, id=34, 453.69
-5pt x 316.18124pt>
-File: visualization-homework_files/figure-latex/unnamed-chunk-7-1.pdf Graphic f
-ile (type pdf)
-<use visualization-homework_files/figure-latex/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: visualization-homework_files/figure-latex/unnamed-chun
-k-7-1.pdf  used on input line 453.
-(pdftex.def)             Requested size: 453.6939pt x 316.18047pt.
-[5 <./visualization-homework_files/figure-latex/unnamed-chunk-7-1.pdf>]
-<visualization-homework_files/figure-latex/unnamed-chunk-9-1.pdf, id=47, 453.69
-5pt x 315.1775pt>
-File: visualization-homework_files/figure-latex/unnamed-chunk-9-1.pdf Graphic f
-ile (type pdf)
-<use visualization-homework_files/figure-latex/unnamed-chunk-9-1.pdf>
-Package pdftex.def Info: visualization-homework_files/figure-latex/unnamed-chun
-k-9-1.pdf  used on input line 511.
-(pdftex.def)             Requested size: 453.6939pt x 315.17673pt.
-<visualization-homework_files/figure-latex/unnamed-chunk-10-1.pdf, id=48, 453.6
-95pt x 315.1775pt>
-File: visualization-homework_files/figure-latex/unnamed-chunk-10-1.pdf Graphic 
-file (type pdf)
-<use visualization-homework_files/figure-latex/unnamed-chunk-10-1.pdf>
-Package pdftex.def Info: visualization-homework_files/figure-latex/unnamed-chun
-k-10-1.pdf  used on input line 525.
-(pdftex.def)             Requested size: 453.6939pt x 315.17673pt.
-[6 <./visualization-homework_files/figure-latex/unnamed-chunk-9-1.pdf>]
-<visualization-homework_files/figure-latex/unnamed-chunk-11-1.pdf, id=60, 457.7
-1pt x 316.18124pt>
-File: visualization-homework_files/figure-latex/unnamed-chunk-11-1.pdf Graphic 
-file (type pdf)
-<use visualization-homework_files/figure-latex/unnamed-chunk-11-1.pdf>
-Package pdftex.def Info: visualization-homework_files/figure-latex/unnamed-chun
-k-11-1.pdf  used on input line 556.
-(pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
-[7 <./visualization-homework_files/figure-latex/unnamed-chunk-10-1.pdf>] [8 <./
-visualization-homework_files/figure-latex/unnamed-chunk-11-1.pdf>] (./visualiza
-tion-homework.aux) ) 
+(./wrangling-pipes.aux) ) 
 Here is how much of TeX's memory you used:
- 13693 strings out of 478268
- 218419 string characters out of 5846347
- 565221 words of memory out of 5000000
- 31635 multiletter control sequences out of 15000+600000
- 502228 words of font info for 73 fonts, out of 8000000 for 9000
+ 13665 strings out of 478268
+ 216526 string characters out of 5846347
+ 557267 words of memory out of 5000000
+ 31613 multiletter control sequences out of 15000+600000
+ 498881 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,6n,77p,1019b,495s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-e
-c.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/te
-xmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fo
-nts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
-ublic/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lm
-tt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on visualization-homework.pdf (8 pages, 1795282 bytes).
+ 74i,6n,77p,1012b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm
+/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-di
+st/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
+pe1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
+lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtti10
+.pfb>
+Output written on wrangling-pipes.pdf (3 pages, 186522 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 18477 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 105 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 22 named destinations out of 1000 (max. 500000)
+ 16441 words of extra memory for PDF output out of 17280 (max. 10000000)
 

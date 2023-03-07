@@ -1,5 +1,5 @@
 ---
-title: "visualization-homework"
+title: "Data Visualization Homework - Acacia Vs Trees"
 author: "Luna L Sanchez Reyes"
 date: "2023-03-02"
 output: pdf_document
@@ -12,20 +12,29 @@ library(ggplot2)
 # getwd()
 ```
 
+# Exercise 3
+
+### Read the data
+
 ```{r}
 trees <- read_tsv(file = "../data-raw/TREE_SURVEYS.txt")
-?read_tsv
 head(trees)
 ```
 
-After visually insepcting the variables, it looks like height is character type and it should be numeric
+---
+
+### Quality assurance
+
+After visually inspecting the variables, it looks like height is character type and it should be numeric
 
 ```{r}
 str(trees)
-trees$HEIGHT
+head(trees$HEIGHT)
 trees$HEIGHT <- as.numeric(trees$HEIGHT)
 head(trees)
 ```
+
+---
 
 Alternatively, we can force variables to be assigned a specific type when we read them:
 ```{r}
@@ -50,18 +59,25 @@ trees[1:3,-(5:10)]
 trees
 ```
 
-Create a subset the trees data frame with just the SURVEY, YEAR, SITE, and canopy_area columns:
+---
+
+Create a subset of the `trees` data frame with just the `SURVEY`, `YEAR`, `SITE`, and `canopy_area` columns:
 
 ```{r}
-subset(trees, select=c(SURVEY, YEAR, SITE, canopy_area))
-data.frame(SURVEY = trees$SURVEY, 
-           YEAR = trees$YEAR, 
-           SITE = trees$SITE, 
-           canopy_area = trees$canopy_area)
+trees_test <- subset(trees, select=c(SURVEY, YEAR, SITE, canopy_area))
+str(trees_test)
+trees_test <- data.frame(SURVEY = trees$SURVEY, 
+                         YEAR = trees$YEAR, 
+                         SITE = trees$SITE, 
+                         canopy_area = trees$canopy_area)
+str(trees_test)
 trees2 <- trees[,c("SURVEY", "YEAR", "SITE", "canopy_area")]
+str(trees2)
 ```
 
-Make a scatter plot with canopy_area on the x axis and HEIGHT on the y axis. Color the points by TREATMENT and create a subplot per species uding the function facet_wrap(). This will plot the points for each variable in the SPECIES column in a separate subplot. Label the x axis “Canopy Area (m)” and the y axis “Height (m)”. Make the point size 2.
+---
+
+Make a scatter plot with `canopy_area` on the x axis and `HEIGHT` on the y axis. Color the points by `TREATMENT` and create a subplot per species uding the function `facet_wrap()`. This will plot the points for each variable in the `SPECIES` column in a separate subplot. Label the x axis `“Canopy Area (m)”` and the y axis `“Height (m)”`. Make the point size 2.
 
 ```{r}
 ggplot(data = trees, mapping = aes(x = canopy_area, y = HEIGHT, color = TREATMENT)) +
@@ -70,17 +86,24 @@ ggplot(data = trees, mapping = aes(x = canopy_area, y = HEIGHT, color = TREATMEN
   facet_wrap(~SPECIES) 
 ```
 
+---
+
 That’s a big outlier in the plot from (2). 50 by 50 meters is a little too big for a real acacia tree, so filter the data to remove any values for AXIS_1 and AXIS_2 that are over 20 and update the data frame. Then, remake the graph.
 
 ```{r}
 # we can do this with the subset function
 trees3 <- subset(trees, canopy_area <= 400)
+# which(is.na(trees4$TREATMENT))
 
 # OR finding the actual value that is the outlier
-which(trees$canopy_area > 2000)
+which(trees$canopy_area > 200)
 trees[3839,]
 trees4 <- trees[-3839,]
+# n <- which(is.na(trees4$TREATMENT))
+# trees4[n,]
 ```
+
+The two tables are the same:
 
 ```{r}
 ggplot(data = trees3, mapping = aes(x = canopy_area, y = HEIGHT, color = TREATMENT)) +
@@ -93,3 +116,18 @@ ggplot(data = trees4, mapping = aes(x = canopy_area, y = HEIGHT, color = TREATME
   geom_point() +
   facet_wrap(~SPECIES)
 ```
+
+---
+
+Final plot:
+
+```{r}
+ggplot(data = trees3, mapping = aes(x = canopy_area, y = HEIGHT, color = TREATMENT)) +
+  geom_point() +
+  scale_x_log10() +
+  scale_y_log10() +
+  facet_wrap(~SPECIES) +
+  geom_smooth() +
+  labs(x = "Canopy area", y = "Tree height")
+```
+

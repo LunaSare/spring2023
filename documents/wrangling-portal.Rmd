@@ -1,5 +1,5 @@
 ---
-title: "Portal data set"
+title: "Data Wrangling: The Portal Data Set"
 author: "Luna L Sanchez Reyes"
 date: "2023-03-02"
 output: pdf_document
@@ -16,7 +16,9 @@ library(dplyr)
 Homework: create an intro describing the location of the experiment and the different experimental treatments.
 Paper here https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/15-2115.1
 
-## 2. Load the data sets and create three data frames
+## 2. Load the data 
+
+There are three different data sets, so to load them we need to create three data frames
 
 ```{r}
 surveys <- read.csv(file = "../data-raw/surveys.csv")
@@ -31,7 +33,7 @@ head(plots)
 
 ## 3. The `dplyr` package for data wrangling 
 
-### Subset columns from a data.frame wth the funvtion `select()`
+### Subset columns from a `data frame` with the function `select()`
 
 ```{r}
 head(surveys)
@@ -102,6 +104,9 @@ head(surveys_filtered)
 surveys_filtered <- filter(surveys, weight > 200 & sex == "F")
 head(surveys_filtered)
 ```
+
+Now, I want values that have weight larger than 200 OR are also females:
+
 
 ```{r, results='hide'}
 surveys_filtered <- filter(surveys, weight > 200 | sex == "F")

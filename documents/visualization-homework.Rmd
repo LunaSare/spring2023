@@ -131,3 +131,86 @@ ggplot(data = trees3, mapping = aes(x = canopy_area, y = HEIGHT, color = TREATME
   labs(x = "Canopy area", y = "Tree height")
 ```
 
+
+Exercise 4
+
+We want to compare the circumference to height relationship in acacia to the same relationship for all trees in the region. These data are stored in two different tables. 
+
+One data set is in the file "ACACIA_DREPANOLOBIUM_SURVEY.txt"
+The other data set is in "TREE_SURVEYS.txt".
+
+First we load both data sets:
+
+```{r}
+# make sure to provide file name as relative path
+read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt",
+         sep = "\t",
+         na.strings = "dead") -> acacia
+
+
+trees <- read_tsv("../data-raw/TREE_SURVEYS.txt",
+               col_types = list(HEIGHT = col_double(),
+                                AXIS_2 = col_double()))
+```
+
+Visual quality assurance and control with the function str()
+
+```{r}
+str(acacia)
+is.numeric(acacia$CIRC)
+is.numeric(acacia$HEIGHT)
+```
+
+```{r}
+str(trees)
+is.numeric(trees$CIRC)
+is.numeric(trees$HEIGHT)
+```
+
+Make a graph with the relationship between CIRC and HEIGHT for all trees as gray circles in the background and the same relationship for acacia as red circles plotted on top of the gray circles. 
+
+```{r}
+ggplot() +
+  geom_point(data = trees, mapping = aes(x = CIRC, y = HEIGHT), color = "gray", alpha = 0.5) +
+  geom_point(data = acacia, mapping = aes(x = CIRC, y = HEIGHT), color = "red", alpha = 0.6)
+```
+
+
+
+```{r}
+ggplot(data = trees, mapping = aes(x = CIRC, y = HEIGHT), color = "gray", alpha = 0.5) +
+  geom_point(color = "gray") +
+  geom_point(data = acacia, mapping = aes(x = CIRC, y = HEIGHT), color = "red", alpha = 0.6) +
+  geom_smooth() +
+geom_smooth(data = acacia, mapping = aes(x = CIRC, y = HEIGHT))
+```
+
+
+Scale both axes logarithmically. Include a linear model fitting for both sets of data, trying different linear models specified using the argument method =. Provide clear labels for the axes.
+
+```{r}
+?geom_smooth
+ggplot(data = trees, mapping = aes(x = CIRC, y = HEIGHT), color = "gray", alpha = 0.5) +
+  geom_point(color = "gray") +
+  geom_point(data = acacia, mapping = aes(x = CIRC, y = HEIGHT), color = "red", alpha = 0.6) +
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_smooth(method = "lm") +
+geom_smooth(data = acacia, mapping = aes(x = CIRC, y = HEIGHT), method = "lm")
+```
+
+
+```{r}
+str(trees)
+unique(trees$SPECIES)
+acacia_sub <- subset(trees, SPECIES == "Acacia_etbaica" | SPECIES == "Acacia_mellifera" | SPECIES == "Acacia_brevispica" | SPECIES == "Acacia_drepanolobium")
+str(acacia_sub)
+```
+
+```{r}
+other_sub <- subset(trees, SPECIES != "Acacia_etbaica" & SPECIES != "Acacia_mellifera" & SPECIES != "Acacia_brevispica" & SPECIES != "Acacia_drepanolobium")
+str(other_sub)
+
+other_sub <- subset(trees, SPECIES == "Croton" | SPECIES == "Balanites")
+```
+

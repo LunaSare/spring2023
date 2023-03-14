@@ -131,3 +131,116 @@ surveys %>% select(year, species_id, weight) %>%
 str(surveys_final)
 ```
 
+## Exercise 3
+
+Reformat the following code in pipe mode:
+```
+ds_data <- filter(surveys, species_id == "DS", !is.na(weight))
+ds_data_by_year <- arrange(ds_data, year)
+ds_weight_by_year <- select(ds_data_by_year, year, weight)
+```
+
+```{r}
+read.csv(file = "../data-raw/surveys.csv") %>% 
+  filter(species_id == "DS", !is.na(weight)) %>% 
+  arrange(year) %>% 
+  select(year, weight) -> final_table
+str(final_table)
+head(final_table)
+```
+
+### Piping to an argument that is not the first one
+
+Some functions do not take the data as the first argument.
+For example the `lm()` function
+
+```{r}
+str(surveys)
+lm(formula = weight ~ year, data = surveys)
+```
+And with a pipe:
+
+```{r}
+surveys %>% 
+  lm(formula = weight ~ year, data = .) # use an underscore if you are using this pipe |>
+```
+Shortcut to create an r block in mac is `Ctrl + Option + i`
+In Windows is `Ctrl + Alt + i`
+
+Exercise 4
+
+```{r}
+surveys %>% 
+  filter(species_id == "DS", !is.na(weight)) %>% 
+  lm(weight ~ year, data = .) %>% 
+  summary()
+```
+### Grouping data or data aggregation
+
+To get summary statistics for variables withing certain groups, we can group our dta by a certain value. For that we use the function `group_by()`
+
+
+```{r}
+str(surveys)
+group_by(.data = surveys, year)
+grouped_surveys <- group_by(surveys, year)
+str(grouped_surveys)
+```
+
+```{r}
+group_by(surveys, year, sex)
+```
+
+### Get summary statistics of groups
+
+The summary function create a new table that has the summary statistyics that we asked for per each group on the tibble.
+
+```{r}
+group_by(surveys, year, sex) %>% 
+  summarize(diversity = n())
+```
+
+```{r}
+group_by(surveys, year) %>% 
+  summarize(mean_weight = mean(weight, na.rm = TRUE))
+```
+
+Exercise 5
+
+1. Load surveys.csv into R using read.csv() and assign it to an object called surveys.
+2. Use the group_by() and summarize() functions to get a count of the number of individuals with each species ID.
+
+```{r}
+str(surveys)
+read.csv(file = "../data-raw/surveys.csv") %>% 
+  group_by(species_id) %>% 
+  summarize(count = n())
+```
+
+3. Use the group_by() and summarize() functions to get a count of the number of individuals with each species ID in each year.
+
+```{r}
+str(surveys)
+read.csv(file = "../data-raw/surveys.csv") %>% 
+  group_by(species_id, year) %>% 
+  summarize(count = n())
+```
+
+4. Use the filter(), group_by(), and summarize() functions to get the mean mass of species with species_id equals to DO in each year.
+
+```{r}
+my_result <- read.csv(file = "../data-raw/surveys.csv") %>% 
+  filter(species_id == "DO") %>% 
+  group_by(year) %>% 
+  summarize(mean_mass = mean(weight, na.rm = TRUE))
+
+my_result
+```
+
+
+```{r}
+read.csv(file = "../data-raw/surveys.csv") %>% 
+  group_by(year) %>% 
+  filter(species_id == "DO") %>% 
+  summarize(mean_mass = mean(weight, na.rm = TRUE)) -> my_result
+```

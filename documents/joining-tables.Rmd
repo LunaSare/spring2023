@@ -1,0 +1,176 @@
+---
+title: "Joining Data Tables"
+author: "Luna L Sanchez Reyes"
+date: "2023-03-14"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+Use the shortcut to add a code block `ctrl + option + i` on mac `ctrl + alt i` on Windows.
+
+Load the three data sets that we are going to join, surveys.csv, species.csv, plots.csv:
+
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys.csv")
+species <- read.csv(file = "../data-raw/species.csv")
+plots <- read.csv(file = "../data-raw/plots.csv")
+```
+
+## Why do we need to combine or join data tables
+
+Homework: elaborate on this topic
+
+## How de we join data tables in R
+
+There is a group of functions `_join()` that allow us to combine two data tables using values on a shared column.
+
+There has to be a shared column; and we need three main arguments to run these functions, two data tables and one column name that has to be provided as a character value.
+
+The different functions allow us to combine in different ways.
+
+ We can run `inner_join` in the classic way:
+
+```{r results='hide'}
+inner_join(surveys, species, by = "species_id")
+```
+
+We can also run it using pipes:
+
+```{r}
+surveys %>% 
+  inner_join(species, by = "species_id") -> joined_table
+```
+
+### How can we explore our combined/joined table?
+
+We want to see the differences between the two input tables and the resulting table.
+To see the differences in columns, we can use `head()`:
+```{r}
+head(species)
+head(surveys)
+head(joined_table)
+```
+To explore the differences in numbers of rows, we can use the `str()` function:
+```{r}
+str(species)
+str(surveys)
+str(joined_table)
+```
+
+What happened with the number of rows in joined_table vs surveys?
+
+It dropped the rows that did not have matching values of the species_id column
+
+## Exercise 1
+
+Use `inner_join()` and `filter()` to get a data frame with the information from the `surveys` and `plots` tables where the "plot_type" is "Control".
+
+```{r error=TRUE}
+surveys %>% 
+  inner_join(plots, by = "plot_type")
+```
+
+This returns an error because we tried to join by a column that is not shared by both data tables.
+
+unique(plots$plot_type)
+```{r error=TRUE}
+surveys %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  filter(plot_type == "Control") %>% 
+  head()
+```
+
+## Automate joining tables and other things with `intersect()`
+
+Which species_id values are shared between the two data tables
+```{r}
+intersect(surveys$species_id, species$species_id)
+```
+
+To find shared columns we use the `colnames()` function:
+
+```{r}
+colnames(surveys)
+colnames(species)
+
+intersect(colnames(surveys), colnames(species))
+```
+
+## Exercise 2
+
+1. Find the column name that is shared between the `plots` table and the `surveys` table. Use that column name for the next question.
+
+Doing it visually, with the colnames function
+```{r}
+colnames(plots)
+colnames(surveys)
+```
+
+Automatically with the function `intersect()`
+
+```{r}
+intersect(colnames(surveys), colnames(plots))
+```
+
+Do the following using a single pipe of code (no nested code nor intermediate variables):
+Use function inner_join() and filter() to get a data frame with the information from the `surveys` and `plots` tables where the "plot_type" is "Rodent Exclosure".
+
+```{r}
+inner_join(surveys, plots, by = "plot_id") %>% 
+  filter(plot_type == "Rodent Exclosure") %>% 
+  str()
+```
+
+## Other join functions
+
+`left_join()` retains all values from the first table, drops unmatching rows from second
+
+`right_join` drops values from the first table and retaining all values from second
+
+`full_join` keeps all values from both tables
+
+## Joining multiple data tables
+
+Can we use the `_join()` function on 3 or more tables at the same time?
+
+```{r error=TRUE}
+inner_join(surveys, species, plots)
+```
+No. It does not recognize more than two tables at a time
+
+So we use a pipe an call the join function two or more times (as needed):
+
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  str()
+```
+
+## Exercise 3
+
+1. We want to do an analysis comparing the size of individuals on the "Control" plots to the "Long-term Krat Exclosures".
+2. Create a data frame with the "year", "genus", "species", "weight" and "plot_type" for all cases where the
+plot type is either "Control" or "Long-term Krat Exclosure". Pay attention to typos in lower case and upper case values.
+3. Only include cases where the column "taxa" is "Rodent".
+Remove any records where the "weight" is missing.
+
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  filter(plot_type == "Long term Krat Exclosure" | plot_type == "Control") %>% 
+  filter(taxa == "Rodent") %>% 
+  filter(!is.na(weight)) %>% 
+  select(year, genus, species, weight, plot_type) %>% 
+  str()
+
+# na.rm =  is an argument of functions like mean: 
+mean(c(NA, 1, 5, 7), na.rm = TRUE)
+```
+
+
+
+

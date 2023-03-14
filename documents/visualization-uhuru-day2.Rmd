@@ -42,7 +42,7 @@ ggplot(data = acacia, mapping = aes(x = HEIGHT, y = FRUITS, color = ANT)) +
 ```
 ### Exercise 1.
 
-Create a scatterplot of circumgerence vs height
+Create a scatterplot of circumference vs height
 ```{r}
 
 ```

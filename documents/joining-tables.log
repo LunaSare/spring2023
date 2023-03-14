@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.12)  9 MAR 2023 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.12)  14 MAR 2023 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**wrangling-pipes.tex
-(./wrangling-pipes.tex
+**joining-tables.tex
+(./joining-tables.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex
 /base/article.cls
@@ -358,8 +358,8 @@ Package: xurl 2022/01/09 v 0.10 modify URL breaks
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box54
-) (./wrangling-pipes.aux)
-\openout1 = `wrangling-pipes.aux'.
+) (./joining-tables.aux)
+\openout1 = `joining-tables.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
 LaTeX Font Info:    ... okay on input line 110.
@@ -510,129 +510,54 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-23.
+13.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-211.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-[4] [5]
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##  $ year           : int [1:35549] 1977 1977 1977 1977 1977
- 1977 1977 1977 1977 1977 ...[] 
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+241.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [2]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 343.
+[3]
+Overfull \hbox (91.99335pt too wide) in paragraph at lines 467--467
+[]\T1/lmtt/m/n/10 ##  $ plot_type      : chr  "Rodent Exclosure" "Rodent Exclos
+ure" "Rodent Exclosure" "Rodent Exclosure" ...[] 
  []
 
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1671] 12170 12171 12172 12173 12174 1217
-5 12176 12177 12178 12179 ...[] 
+[4]
+Overfull \hbox (39.4935pt too wide) in paragraph at lines 527--527
+[]\T1/lmtt/m/n/10 ##  $ plot_type      : chr  "Control" "Long-term Krat Exclosu
+re" "Control" "Rodent Exclosure" ...[] 
  []
 
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1469] 13841 13842 13843 13844 13845 1384
-6 13847 13848 13849 13850 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1569] 15310 15311 15312 15313 15314 1531
-5 15316 15317 15318 15319 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1311] 16879 16880 16881 16882 16883 1688
-4 16885 16886 16887 16888 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1347] 18190 18191 18192 18193 18194 1819
-5 18196 18197 18198 18199 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1038] 19537 19538 19539 19540 19541 1954
-2 19543 19544 19545 19546 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1222] 21993 21994 21995 21996 21997 2199
-8 21999 22000 22001 22002 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1706] 23215 23216 23217 23218 23219 2322
-0 23221 23222 23223 23224 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:2493] 24921 24922 24923 24924 24925 2492
-6 24927 24928 24929 24930 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1610] 27414 27415 27416 27417 27418 2741
-9 27420 27421 27422 27423 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1135] 29024 29025 29026 29027 29028 2902
-9 29030 29031 29032 29033 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1552] 30159 30160 30161 30162 30163 3016
-4 30165 30166 30167 30168 ...[] 
- []
-
-
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:1610] 31711 31712 31713 31714 31715 3171
-6 31717 31718 31719 31720 ...[] 
- []
-
-[6]
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 662--662
-[]\T1/lmtt/m/n/10 ##   .. ..$ : int [1:2229] 33321 33322 33323 33324 33325 3332
-6 33327 33328 33329 33330 ...[] 
- []
-
-[7] [8] [9] [10] (./wrangling-pipes.aux) ) 
+[5] [6] (./joining-tables.aux) ) 
 Here is how much of TeX's memory you used:
- 13699 strings out of 478268
- 216990 string characters out of 5846347
- 570485 words of memory out of 5000000
- 31622 multiletter control sequences out of 15000+600000
- 499130 words of font info for 71 fonts, out of 8000000 for 9000
+ 13693 strings out of 478268
+ 217040 string characters out of 5846347
+ 567456 words of memory out of 5000000
+ 31621 multiletter control sequences out of 15000+600000
+ 499697 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,6n,77p,1012b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/f
-onts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips
-/lm/lm-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10
-.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/te
-xmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fo
-nts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
-public/lm/lmtti10.pfb>
-Output written on wrangling-pipes.pdf (10 pages, 204082 bytes).
+ 74i,6n,77p,1011b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/d
+vips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1
+.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/f
+onts/type1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
+public/lm/lmtk10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/
+lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtti10.pf
+b>
+Output written on joining-tables.pdf (6 pages, 218986 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 16473 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 16457 words of extra memory for PDF output out of 17280 (max. 10000000)
 

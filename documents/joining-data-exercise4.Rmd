@@ -1,0 +1,33 @@
+---
+title: "Exercise 4"
+author: "Luna L Sanchez Reyes"
+date: "2023-03-16"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load the three data sets that we are going to join, surveys.csv, species.csv, plots.csv:
+
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys.csv")
+species <- read.csv(file = "../data-raw/species.csv")
+plots <- read.csv(file = "../data-raw/plots.csv")
+```
+
+## Problem 3
+Create a data frame 
+with the average "hindfoot_length"  - I should use the mean function and apply it to hindfoot length
+for each "species_id" in each "year" - to solve this. I would gorup by species id and then by year
+with no null values - remove NA from hindfoot length
+
+```{r}
+surveys %>% 
+  filter(!is.na(hindfoot_length)) %>% 
+  group_by(species_id, year) %>% 
+  summarize(mean(hindfoot_length, na.rm = TRUE)) # filtering is more efficient than calling the argument na.rm
+```
+
+

@@ -1,0 +1,174 @@
+---
+title: "Joining Vectors"
+author: "Luna L Sanchez Reyes"
+date: "2023-03-16"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+## What are vectors?
+
+- they are unidimensional matrices
+- they can only hold one type of data, either numeric (integer or double), character, or logical (complex numbers)
+
+## What are data frames
+
+- it is a two dimensional matrix: rows, and columns
+- it can hold any type of data
+- it can only hold different types of data in a certain way:
+  - only columns can have different data types
+  - within a column, all rows must have the same data type
+
+- A data frame can also be defined as a collection of vectors (they can be of different or the same type) all of the same length!
+
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys.csv")
+str(surveys)
+```
+## Creating vectors - review
+
+A character vector with the function `c()`
+```{r}
+c("luna", "Avi", "Anita", "James", "Charles", "Damian", "Davinder") -> our_names
+str(our_names)
+1:7 # the colon operator creates a vector of numbers
+1:7 -> my_numbers
+-100:200
+```
+In how many steps does the colon operator increase? It increases in a step of 1.
+
+What do we do if I want to create a numeric sequence that increases in steps different than 1?
+?seq
+```{r}
+seq(-100, 200, by = 0.1) -> my_numbers
+str(my_numbers)
+```
+```{r}
+letters
+LETTERS
+```
+
+
+## Creating data frames from vectors
+
+The most general way to do this is with the function `data.frame()`:
+
+```{r error = TRUE}
+data.frame(names = our_names, numbers = my_numbers)
+```
+Remember: Vectors must have the same length (or be. amultiple of each other) to be part of a data frame!
+
+```{r}
+data.frame(names = our_names, numbers = 1:7)
+```
+
+R will recycle the values only if they are a multiple of the vector:
+
+```{r}
+data.frame(names = our_names, numbers = 1)
+```
+
+To recylce the values of a numeric vector of length 2, we have to repeat the vector of names two times, so it is a multiple of 2:
+
+```{r}
+data.frame(names = rep(our_names, 2), numbers = c(2, 5.5))
+```
+
+## Exercise 6
+
+You have data on the length, width, and height of 10 individuals of the yew Taxus baccata stored in the following vectors:
+
+```{r}
+my_length <- c(2.2, 2.1, 2.7, 3.0, 3.1, 2.5, 1.9, 1.1, 3.5, 2.9)
+width <- c(1.3, 2.2, 1.5, 4.5, 3.1, NA, 1.8, 0.5, 2.0, 2.7)
+height <- c(9.6, 7.6, 2.2, 1.5, 4.0, 3.0, 4.5, 2.3, 7.5, 3.2)
+```
+Make a data frame that contains these three vectors as columns along with a "genus" column containing the genus name Taxus on all rows and a "species" column containing the species epithet baccata on all rows.
+
+```{r}
+data.frame(Length = my_length, Width = width, Height = height, genus = "Taxus", species = "baccata")
+```
+?table
+?length
+```{r error = TRUE}
+my_table <- data.frame(width, length = my_length, height)
+my_table$genus <- "Taxus"
+my_table$species <- "baccata"
+str(my_table)
+my_table
+```
+## Extracting/accessing values from vectors and data frames
+
+```{r}
+surevys <- read.csv(file = "../data-raw/surveys.csv")
+str(surveys)
+```
+
+One common way to extract or access vectors crom column in a data frame is the dollar sign symbol `$`
+```{r}
+surveys$record_id -> record_id
+```
+
+Another way is with the square brackets `[]`
+
+```{r}
+surveys[1:10, "hindfoot_length"]
+```
+If I want all the values from the rows of column hindfoot length:
+
+```{r}
+surveys[ , "hindfoot_length"] -> hindfoot_length
+```
+
+Another way is using doubel square brackets
+```{r}
+surveys[["record_id"]] %>% 
+  head()
+```
+
+Exercise 7
+
+1. Use $ to extract the weight column into a vector called surveys_weight
+
+```{r}
+surveys$weight -> surveys_weight
+surveys_weight <- surveys$weight
+```
+
+
+2. Use [] to extract the month column into a vector called surveys_month
+
+```{r}
+surveys[, "month"] -> surveys_month
+# if you use single square brackets you will still get a data frame
+surveys["month"] %>% head()
+# so we need double square bracket to get the actual vector
+surveys[["month"]] %>% head()
+```
+
+
+3. Extract the hindfoot_length column into a vector and calculate the mean hindfoot length ignoring missing values.
+
+```{r}
+mean(surveys$hindfoot_length, na.rm = TRUE)
+```
+
+```{r}
+surveys$hindfoot_length -> hindfoot_length
+na.omit(hindfoot_length) %>% mean()
+```
+
+```{r}
+surveys[["hindfoot_length"]] %>% mean(na.rm = TRUE)
+surveys[,"hindfoot_length"] %>% mean(na.rm = TRUE)
+```
+
+
+
+
+
+

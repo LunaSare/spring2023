@@ -1,0 +1,239 @@
+---
+title: "functions"
+author: "Luna L Sanchez Reyes"
+date: "2023-03-21"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+There is a difference between creating a function and running it.
+
+What is it?
+
+
+## The general form of functions
+
+```{r, error = TRUE}
+name_of_the_function <- function(data_frame, mass, length){
+  data_frame %>% 
+    group_by(mass, length) %>% 
+    summarize(n = n())
+}
+```
+
+
+```{r}
+convert_pounds_to_grams <- function(pounds) {
+     grams = 453.6 * pounds
+     return(grams)
+}
+convert_pounds_to_grams(pounds = 13)
+```
+
+
+
+
+## Exercise 1: Converting between units of mass
+
+1. Copy the following function into an R chunk of your Rmd file and replace the spaces ________ with variables names for the input and output.
+
+```
+ convert_pounds_to_grams <- function(________) {
+     grams = 453.6 * pounds
+     return(________)
+ }
+```
+
+```{r}
+red <- 3.75
+yellow <- "Luna"
+pounds = 3
+convert_pounds_to_grams <- function(pounds = 1) {
+   grams = 453.6 * pounds
+   return(grams)
+}
+
+convert_pounds_to_grams2 <- function(grams = 1) {
+   grams = 453.6 * pounds
+   return(grams)
+}
+```
+
+```{r}
+convert_pounds_to_grams(pounds = 10089)
+convert_pounds_to_grams()
+length(x = yellow)
+
+convert_pounds_to_grams2()
+convert_pounds_to_grams2(grams = 3)
+```
+
+
+
+2. Use the function to calculate how many grams there are in 3.75 pounds.
+What are the following parts of the function called:
+a)
+  convert_pounds_to_grams
+b)
+  {
+   grams = 453.6 * pounds
+   return(________)
+  }
+c)
+  function(________)
+  
+  
+## Exercise 2: The weight of dinosaurs
+
+```{r}
+get_mass_from_length_theropoda <- function(length){
+  mass <- 0.73 * length ^ 3.63
+  return(mass)
+}
+```
+
+
+1. Use the function get_mass_from_length_theropoda() to get the mass of a Spinosaurus that is 16 m long based on its reassembled skeleton.
+
+
+```{r}
+get_mass_from_length_theropoda(16)
+```
+
+
+2. Create a new version of this function called get_mass_from_length() that takes the arguments length, a and b. Remember to change the body of the function accordingly, and use the following code to estimate the mass: 
+
+mass <- a * length ^ b.
+
+```{r}
+get_mass_from_length <- function(length, a, b){
+    mass <- a * length ^ b
+    return(mass)
+}
+```
+
+
+
+3. Use this new function to estimate the mass of a Sauropoda dinosaur (with parameters a = 214.44, and b = 1.46) that is 26 m long.
+
+```{r}
+get_mass_from_length(length = 26, a = 214.44, b = 1.46)
+```
+
+
+## Why do we use functions in programming?
+
+- We already use functions a lot. Basically everything we run in R is a function.
+- Reduce the amount of code we write.
+- No need to repeat code, so less chance of repeating errors or introducing new errors by miss-typing code.
+- Helps with reproducibility: no need to repeat code, allows others (and future self) to run code in a straightforward way, with accuracy.
+- Make it easier to write modular code that you can reuse for other projects
+- Makes it easier to run code and remember it.
+- It allows to organize analysis better, by putting code intended to run something together in the same function.
+
+
+## Exercise 4: Combining Functions
+
+1. Write a function called convert_kg_to_pounds that converts kilograms into pounds using the formula pounds = 2.205 * kg.
+
+```{r}
+convert_kg_to_pounds <- function(kg = 1) {
+  pounds <- 2.205 * kg
+  return(pounds)
+}
+```
+
+
+2. Use the function to calculate how many pounds is 50 kg.
+
+```{r}
+convert_kg_to_pounds(kg = 50)
+```
+
+
+3. Combine the function convert_kg_to_pounds() and your get_mass_from_length() function from the previous exercise to estimate the weight, in pounds, of a 12 m long Stegosaurus with a = 10.95 and b = 2.64 (The estimated a and b values for Stegosauria from Seebacher 2001).
+
+```{r}
+get_mass_from_length(length = 12, a = 10.95, b = 2.64) %>% 
+  convert_kg_to_pounds()
+
+
+length_in_pounds <- function(length, a, b){
+  get_mass_from_length(length = length, a = a, b = b) %>% 
+  convert_kg_to_pounds()
+}
+```
+
+
+```{r}
+length_in_pounds(length = 35, a = 13, b = 1.3)
+```
+
+Exercise 5: A function for the Portal data set
+
+2. Combine the surveys and species tables into a single data frame.
+
+There are several ways to create data frames within R. Depending on the data that we want as data frame, there are different functions that we can use to create a data frame object.
+- `read.csv()`: If we already have a file (either CSV or TSV) with data that we want to read into R as a data frame 
+- `data.frame()`: If we want to create a data frame from vectors
+- `_join()` function: If we already have some data frames in R that we want to combine.
+- There are many functions that create a data frame as an output, for example:
+  - summarize(): It creates a new data frame summarizing information from another data frame
+  - but there are many other packages that also generate data frames with different types of data
+  
+```{r}
+combined_table <- inner_join(surveys, species, by = "species_id")
+```
+
+
+3. Write a function that:
+Takes three arguments - a data frame (the combined table created before), a genus name, and a species name,
+Uses functions from the dplyr package to produce a data frame with two columns: year and count, where count is the number of individuals (i.e., the number of rows) for the species indicated by genus and species in that year,
+The function returns the resulting data frame. Note that this data frame is a time series by year.
+
+As opposed to data frames, there is one one way to create a function: the function `function()`:
+
+```
+name_of_the_function <- function(argument1, argument2, arguent3, ...){
+  This is the body of the function
+  In here we do operation using the values stored in the arguments.
+}
+```
+
+```{r}
+# finder <- 
+# species_yearcount
+# my_function1
+# test
+# time_series
+# my_function
+# get_species_count_by_year
+
+my_function <- function(mixed)
+my_function <- function(a)
+my_function <- function(combined_df)
+my_function <- function(data_frame, genus_name, species_name) {
+  data_frame %>% 
+    group_by(year) %>% 
+    filter(genus == genus_name, species == species_name) %>% 
+    summarize(count = n()) %>% 
+    return()
+}
+
+```
+
+4. Use your function to get the data frame of time series by year for the genus Dipodomys and the species merriami and then make a graph of this time series using ggplot that has year on the x axis, count on the y axis, and displays the data as points.
+
+```{r}
+my_function(data_frame = combined_table, genus_name = "Dipodomys", species_name = "merriami")
+```
+
+
+Use your function to get the data frame time series by year for the genus Chaetodipus and species penicillatus and then make a graph of this time-series using ggplot that has year on the x axis, count on the y axis, and displays the data as blue points (with size = 1) connected by blue lines (with size = 2). Change the x axis label to Year and the y axis label to Number of Individuals.
+
+
+
+

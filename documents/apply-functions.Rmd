@@ -1,0 +1,166 @@
+---
+title: "apply functions"
+author: "Luna L Sanchez Reyes"
+date: "2023-04-04"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+?lapply
+?mapply
+```
+
+The `apply` functions allow us us to apply a function to a vector or list of values iteratively.
+This helps minimize errors in code and makes the analyses more efficient.
+
+With `lapply()` and `sapply()` functions, we can only provide one argument to iterate on.
+
+`sapply()` function simplifies the output to a vector (or the simplest data structure possible), while `lapply()` returns an output in the form of a list.
+
+With `mapply()`, we can provide multiple arguments to iterate on.
+Be cause it is a multivariate version of `sapply()`, it probably also retruns a vector or simplified data structure as result.
+
+## Exercise 1
+
+Write a function named `mass_from_length_theropoda()` that takes length as an argument to get an estimate of mass for Theropoda dinosaurs. Use the equation mass <- 0.73 * length^3.63. Copy and run the code below to generate the object theropoda_lengths in your R environment. 
+
+```{r}
+mass_from_length_theropoda <- function(length = 1) {
+  mass <- 0.73 * length^3.63
+  return(mass)
+}
+mass_from_length_theropoda()
+```
+
+
+```{r}
+theropoda_lengths <- c(17.8013631070471, 20.3764452071665, 14.0743486294308, 25.65782386974, 26.0952008049675, 20.3111541103134, 17.5663244372533, 11.2563431277577, 20.081903202614, 18.6071626441984, 18.0991894513166, 23.0659685685892, 20.5798853467837, 25.6179254233558, 24.3714331573996, 26.2847248252537, 25.4753783544473, 20.4642089867304, 16.0738256364701, 20.3494171706583, 19.854399305869, 17.7889814608919, 14.8016421998303, 19.6840911485379, 19.4685885050906, 24.4807784966691, 13.3359960054899, 21.5065994598917, 18.4640304608411, 19.5861532398676, 27.084751999756, 18.9609366301798, 22.4829168046521, 11.7325716149514, 18.3758846100456, 15.537504851634, 13.4848751773738, 7.68561192214935, 25.5963348603783, 16.588285389794)
+```
+
+Pass the entire vector to your function (by giving it as value for the length argument); this calculates the mass for each length value in the vector theropoda_lengths.
+
+```{r}
+mass_from_length_theropoda(length = theropoda_lengths)
+```
+What is the output? It is a vector of masses calculated from theropda lengths using the function we created above (called `mass_from_length_theropoda()`).
+
+```{r}
+theropoda_masses <- mass_from_length_theropoda(length = theropoda_lengths)
+
+my_list <- list(theropoda_masses)
+second_list <- c(my_list, list(c("Luna", "Avi", "Anita")))
+
+second_list[[1]]
+
+data.frame(theropoda_masses, c("Anita", "Avi", "Luna", "Maria"))
+```
+
+
+Create a new version of the function named `mass_from_length()` that uses the equation `mass <- a * length^b` and takes length, a and b as arguments. In the function arguments, set the default values for a to 0.73 and b to 3.63. If you run this function with just the length data from Part 1, you should get the same result as Part 1. 
+
+```{r}
+mass_from_length <- function(length, a = 0.73, b = 3.63){
+  mass <- a * length^b
+  return(mass)
+}
+new_masses <- mass_from_length(length = theropoda_lengths)
+# rm(new_lengths) # The rm function allows to remove objects from the R environment
+
+theropoda_masses == new_masses
+all(theropoda_masses == new_masses) # tests that all values in a logical vector are equal tot TRUE
+all.equal(theropoda_masses, new_masses)
+```
+
+Copy the data below into R and call your function using the vector of lengths from Part 1 (above) and these vectors of a and b values to estimate the mass for the dinosaurs using different values of a and b.
+```{r}
+a_values <- c(0.759, 0.751, 0.74, 0.746, 0.759, 0.751, 0.749, 0.751, 0.738, 0.768, 0.736, 0.749, 0.746, 0.744, 0.749, 0.751, 0.744, 0.754, 0.774, 0.751, 0.763, 0.749, 0.741, 0.754, 0.746, 0.755, 0.764, 0.758, 0.76, 0.748, 0.745, 0.756, 0.739, 0.733, 0.757, 0.747, 0.741, 0.752, 0.752, 0.748)
+
+b_values <- c(3.627, 3.633, 3.626, 3.633, 3.627, 3.629, 3.632, 3.628, 3.633, 3.627, 3.621, 3.63, 3.631, 3.632, 3.628, 3.626, 3.639, 3.626, 3.635, 3.629, 3.642, 3.632, 3.633, 3.629, 3.62, 3.619, 3.638, 3.627, 3.621, 3.628, 3.628, 3.635, 3.624, 3.621, 3.621, 3.632, 3.627, 3.624, 3.634, 3.621)
+```
+
+```{r}
+mass_from_length(length = theropoda_lengths, a = a_values, b = b_values)
+```
+
+Basic functions can "naturally" iterate through values in a vector to perform calculations.
+
+3. Create a data frame for this data using the code `dino_data <- data.frame(theropoda_lengths, a_values, b_values)`. Use dplyr to add a new masses column to this data frame (using mutate() and your function) and print the result to the console.
+
+```{r}
+dino_data <- data.frame(theropoda_lengths, a_values, b_values)
+head(dino_data)
+```
+`<<-` the scope operator or double arrow, allows creating and modifying objects in parent variables.
+
+```{r}
+
+```
+
+
+## Exercise 2
+
+1. Create a new version of your mass_from_length_theropoda() function from Part 1 of Exercise 1 called mass_from_length_max().
+This function should only calculate a mass if the value of length passed to the function is less than 20.
+
+```{r}
+
+theropoda_lengths < 20
+
+mass_from_length_max <- function(length) {
+  if (length < 20) {
+    mass <- 0.73 * length^3.63
+    return(mass)
+  } else {
+    return(NA)
+  }
+}
+
+# mass_from_length_max(length) {
+#   if (length < 20) {
+#     mass <- 0.73 * length^3.63
+#   } else {
+#     mass <- NA
+#   }
+#   return(mass)
+# }
+
+# mass_from_length_max(length) {
+#   if (length < 20) {
+#     mass <- 0.73 * length^3.63
+#     return(mass)
+#   }
+# }
+```
+
+
+2. If length is greater than 20, return NA instead.
+Use `sapply()` and this new function to estimate the mass for the theropoda_lengths data from Exercise 1.
+
+```{r, error = TRUE}
+mass_from_length_max(length = theropoda_lengths)
+```
+
+```{r}
+sapply(theropoda_lengths, mass_from_length_max)
+```
+
+
+## Exercise 3
+
+1. Download the CSV file of data on dinosaur lengths with species names into your data folder and import it using read.csv().
+
+2. Write a function get_mass_from_length_by_name() that uses the equation mass <- a * length^b to estimate the size of a dinosaur from its length. This function should take two arguments, the length and the name of the dinosaur group. Inside this function use if/else if/else statements to check to see if the name is one of the following values and if so set a and b to the appropriate values from Seebacher 2001.
+Stegosauria: a = 10.95 and b = 2.64
+Theropoda: a = 0.73 and b = 3.63
+Sauropoda: a = 214.44 and b = 1.46
+If the name is not any of these values set a = NA and b = NA.
+
+3. Use this function and `mapply()` to calculate the estimated mass for each dinosaur. You’ll need to pass the data to `mapply()` as single vectors or columns, not the whole data frame.
+
+4. Using dplyr, add a new masses column to the data frame (using rowwise(), mutate() and your function) and print the result to the console.
+
+5. Using ggplot2, make a histogram of dinosaur masses with one subplot for each species (remember facet_wrap()).

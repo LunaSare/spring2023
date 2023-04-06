@@ -153,14 +153,83 @@ sapply(theropoda_lengths, mass_from_length_max)
 
 1. Download the CSV file of data on dinosaur lengths with species names into your data folder and import it using read.csv().
 
-2. Write a function get_mass_from_length_by_name() that uses the equation mass <- a * length^b to estimate the size of a dinosaur from its length. This function should take two arguments, the length and the name of the dinosaur group. Inside this function use if/else if/else statements to check to see if the name is one of the following values and if so set a and b to the appropriate values from Seebacher 2001.
+```{r}
+dino_table <- read.csv(file = "../data-raw/dinosaur_lengths.csv") 
+head(dino_table)
+```
+
+2. Write a function get_mass_from_length_by_name() that uses the equation 
+`mass <- a * length^b` to estimate the mass of a dinosaur from its length. This function should take two arguments, the length and the name of the dinosaur group. Inside this function use if/else if/else statements to check to see if the name is one of the following values and if so set a and b to the appropriate values from Seebacher 2001.
 Stegosauria: a = 10.95 and b = 2.64
 Theropoda: a = 0.73 and b = 3.63
 Sauropoda: a = 214.44 and b = 1.46
 If the name is not any of these values set a = NA and b = NA.
 
-3. Use this function and `mapply()` to calculate the estimated mass for each dinosaur. You’ll need to pass the data to `mapply()` as single vectors or columns, not the whole data frame.
+```{r}
+# a <- 3 using values from ourtside the function environment
+get_mass_from_length_by_name <- function(dino_length, dino_name) {
+  if (dino_name == "Stegosauria") {
+    a <- 10.95
+    b <- 2.64
+  } else if (dino_name == "Theropoda") {
+    a <- 0.73
+    b <- 3.63
+  } else if (dino_name == "Sauropoda") {
+    a <- 214.4
+    b <- 1.46
+  } else {
+    a <- NA
+    b <- NA
+  }
+  mass <- a * dino_length^b
+  #length(c("Monday", "Tuesday", "Wed"))
+  return(mass)
+}
+get_mass_from_length_by_name(dino_length = 100, dino_name = "Luna")
+```
+
+
+3. Use this function and `mapply()` to calculate the estimated mass for each dinosaur on the data table. You’ll need to pass the data to `mapply()` as single vectors or columns, not the whole data frame.
+
+```{r}
+names(dino_table)
+?mapply
+dino_masses <- mapply(FUN = get_mass_from_length_by_name, 
+       dino_length = dino_table$lengths,
+       dino_name = dino_table$species)
+
+head(dino_masses, 10)
+```
+
 
 4. Using dplyr, add a new masses column to the data frame (using rowwise(), mutate() and your function) and print the result to the console.
 
+```{r}
+library(dplyr)
+
+dino_table %>%
+  rowwise() %>%
+  mutate(masses = get_mass_from_length_by_name(lengths, species)) %>% 
+  head(10)
+
+
+dino_table %>% 
+  mutate(masses = dino_masses) %>% 
+  head(10)
+
+dino_table$masses <- dino_masses
+head(dino_table)
+```
+
+
 5. Using ggplot2, make a histogram of dinosaur masses with one subplot for each species (remember facet_wrap()).
+
+```{r}
+library(ggplot2)
+dino_table %>% 
+  filter(!is.na(masses)) %>% 
+  ggplot() +
+  geom_histogram(mapping = aes(x = masses, color = species)) +
+  facet_wrap(~species)
+```
+

@@ -17,6 +17,7 @@ Loops can let us iterate over multiple functions and whole blocks of code.
 
 ## The general structure of a for loop
 
+The general syntax to run a for loop is as follows:
 ```{r, eval=FALSE}
 
 for (variable_used_inside_the_loop in object_with_values) {
@@ -24,6 +25,7 @@ for (variable_used_inside_the_loop in object_with_values) {
 }
 ```
 
+An example:
 ```{r}
 lengths <- c(13.3, 15, 100)
 
@@ -58,7 +60,7 @@ for (mass_lbs in mass_lbs) {
 }
 ```
 
-### Looping over using an index
+## Looping over using an index
 
 What is an index in R?
 It is the numeric position of values inside any data structure in R.
@@ -67,7 +69,7 @@ For example in the following vector
 ```{r}
 flowers <- c("lilacs", "daisies", "jasmins")
 str(flowers)
-# To acces the second elemnt in the vector, I need to use the index number 2 inside the square brackets, and that returns the values that is in that position in the vector
+# To access the second element in the vector, we need to use the number 2 as index inside the square brackets, and that returns the value that is in position number 2 in the vector
 flowers[2]
 ```
 
@@ -89,7 +91,7 @@ for (j in 1:length(birds)){
   print(birds[j])
 }
 ```
-### Storing results from a for loop using indices
+## Storing results from a for loop using indices
 
 So far we have just printed some values and results from some equations.
 
@@ -111,20 +113,22 @@ my_result <- for (variable in vector) {
 
 The only way to save results from each iteration of the loop is by saving them into an empty object.
 
+Run the following loop:
+
 ```{r}
 for (i in 1:length(flowers)) {
   upper <- toupper(flowers[i])
   print(upper)
 }
 ```
-
-To create an empty vector, we use the function vector()
+To store the output of running the function `toupper()` we need to create an empty vector.
+To create an empty vector, we use the function `vector()`.
 
 ```{r}
 my_results <- vector(mode = "character", length = length(flowers))
 my_results
 ```
-No we can use this empty vector and indices inside. aloop to store results
+Now we can use this empty vector and indices inside a loop to store results:
 
 ```{r}
 for (i in 1:length(flowers)) {
@@ -148,7 +152,7 @@ areas
 ```
 
 
-### Looping over multiple object with indices
+## Looping over multiple object with indices
 
 
 We have 3 vectors:
@@ -176,6 +180,7 @@ for (i in 1:length(dino_names)) {
 dino_masses
 dino_masses[4] <- NA
 dino_masses[100] <- NA
+dino_masses
 ```
 
 Exercise 5. Complete the code below to calculate an area for each pair of lengths and widths, store the areas in a vector, and after they are all calculated print them out:

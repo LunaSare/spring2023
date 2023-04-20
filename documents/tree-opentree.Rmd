@@ -1,0 +1,76 @@
+---
+title: "Tree from Open Tree"
+author: "Luna L Sanchez Reyes"
+date: "2023-04-20"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ape) # Analysis, Phylogenetics and Evolution R package
+# install.packages("rotl") # for installation
+library(rotl) # an R interface for the Open Tree of Life
+```
+
+Insects - 1 million named species
+Mammals - 5k named species
+Flowering plants - 200k named species 
+
+### Read a newick tree from the Open Tree of Life
+
+The following function can only read trees in newick format. Make sure your file is a newick tree.
+If you got your tree from the Phylesystem repo, you tree is going to be in json format and will not be read by the function.
+
+Newick Tree downloaded from https://tree.opentreeoflife.org/opentree/opentree13.4@ott118027/Gymnophiona
+
+```{r}
+tree <- read.tree(file = "../data-raw/delsuc_2008.tre")
+```
+
+Now plot the tree:
+
+```{r, fig.height= 7, fig.width=5}
+plot(tree, cex = 0.5)
+mtext(text = "Delsuc 2008 OpenTree tree")
+```
+
+We can also use the url of a tree to read a tree into R. We will provide th eURL in the argument `file =`.
+In this case, we do not have to keep a copy of the file, we can just download it directly 
+The url is “http://ape-package.ird.fr/APER/APER2/primfive.tre”:
+
+```{r}
+small_tree <- read.tree(file = "http://ape-package.ird.fr/APER/APER2/primfive.tre")
+small_tree
+```
+The R structure of a phylogenetic tree
+
+### Getting a tree for your species from the Open Tree of Life
+
+The Open Tree of Life has tools that allow to match the names of a group or species to their unified taxonomy so that we can look for information on their databases.
+
+If we are doing this in R, we are using the `tnrs_match_names()` from the package `rotl`; tnrs stands for taxonomic name resolution service:
+
+```{r}
+tnrs <- tnrs_match_names(names = "amphibians")
+class(tnrs)
+tnrs
+```
+What is the main difference between the information that we have in the coumn `search_string` and `unique_name`:
+One is the search string and the other is the scientific taxonomic name from the Open Tree of Life unified Taxonomy (OTT).
+
+We can use the unique number identifier from OTT to get information fro that taxon.
+
+To get a tree we can use the function `tol_subtree()`
+
+```{r}
+tol_subtree(ott_id = tnrs$ott_id)
+```
+
+### Exercise
+
+Get a subtree from a group; extract the OTT id using the function `tnrs_match_names()`.
+
+
+
+
+

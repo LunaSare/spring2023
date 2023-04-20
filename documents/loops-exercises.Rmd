@@ -1,0 +1,113 @@
+---
+title: "loop exercises"
+author: "Luna L Sanchez Reyes"
+date: "2023-04-11"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 6: Size Estimates By Name Loop
+
+If dinosaur_lengths.csv is not already in your working directory download a copy of the data on dinosaur lengths with species names. Load it into R.
+
+```{r}
+dino_data <- read.csv(file = "../data-raw/dinosaur_lengths.csv")
+head(dino_data)
+```
+
+Write a function mass_from_length() that uses the equation `mass <- a * length^b` to estimate the mass of a dinosaur from its length. This function should take two arguments, length and species. For each of the following inputs for species, use the given values of a and b for the calculation from Seebacher 2001:
+
+For Stegosauria: a = 10.95 and b = 2.64
+For Theropoda: a = 0.73 and b = 3.63
+For Sauropoda: a = 214.44 and b = 1.46
+For any other value of species: a = 25.37 and b = 2.49
+```{r}
+mass_from_length <- function(dino_length, dino_species) {
+  if (dino_species == "Stegosauria") {
+    a <- 10.95
+    b <- 2.64
+  } else if (dino_species == "Theropoda") {
+    a <- 0.73
+    b <- 3.63
+  } else if (dino_species == "Sauropoda") {
+    a <- 214.44
+    b <- 1.46
+  } else {
+    a <- 25.37
+    b <- 2.49
+  }
+  mass <- a * dino_length^b
+  return(mass)
+}
+```
+
+Use this function and a for loop to calculate the estimated mass for each dinosaur, store the masses in a vector, and after all of the calculations are complete show the first few items in the vector using head().
+
+```{r}
+# for (i in 1:length(dino_lengths$species))
+
+# seq_along(dino_lengths$species)
+
+my_results <- vector(mode = "numeric", length = nrow(dino_data))
+for (i in 1:nrow(dino_data)) {
+  mass_i <- mass_from_length(dino_length = dino_data$lengths[i], dino_species = dino_data$species[i])
+  # print(mass_i)
+  my_results[i] <- mass_i
+}
+
+head(my_results)
+```
+
+
+Add the results in the vector back to the original data frame.
+
+```{r}
+dino_data$masses <- my_results
+head(dino_data)
+```
+
+
+Show the first few rows of the data frame using head().
+
+Calculate the mean mass for each species using dplyr.
+
+
+```{r}
+library(dplyr)
+dino_data %>% 
+  group_by(species) %>% 
+  summarise(mean_mass = mean(masses))
+
+```
+
+## Exercise 7
+
+You have a satellite collars on a number of different individuals and want to be able to quickly look at all of their recent movements at once. The data is posted daily to a URL, as a zip file, and contains one csv file for each individual: http://www.datacarpentry.org/semester-biology/data/individual_collar_data.zip.
+
+Start your solution by:
+
+If individual_collar_data.zip is not already in your working directory download the zip file using download.file()
+
+```{r}
+download.file(url = "http://www.datacarpentry.org/semester-biology/data/individual_collar_data.zip", destfile = "../data-raw/individual_collar_data.zip")
+```
+
+Unzip it using unzip()
+
+```{r}
+unzip("../data-raw/individual_collar_data.zip", exdir = "../data-raw/")
+?unzip
+```
+
+Obtain a list of all of the files with file names matching the pattern "collar-data-.*.txt" (using list.files())
+
+```{r}
+list.files(path = "../data-raw/", pattern = "collar-data-.*.txt")
+```
+
+Use a loop to load each of these files into R and make a line plot (using geom_path()) for each file with long on the x axis and lat on the y axis. Graphs, like other types of output, won’t display inside a loop unless you explicitly display them, so you need put your ggplot() command inside a print() statement. Include the name of the file in the graph as the graph title using labs().
+
+Add code to the loop to calculate the minimum and maximum latitude in the file, and store these values, along with the name of the file, in a data frame. Show the data frame as output.

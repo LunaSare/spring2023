@@ -68,9 +68,133 @@ tol_subtree(ott_id = tnrs$ott_id)
 
 ### Exercise
 
-Get a subtree from a group; extract the OTT id using the function `tnrs_match_names()`.
+Get a subtree from a group using the function `tol_subtree()`; extract the OTT id using the function `tnrs_match_names()`.
+
+```{r}
+tnrs_dolphins <- tnrs_match_names(names = "dolphins")
+tnrs_dolphins
+```
+The function above ran the TNRS service to match the common name that I provided to the Open Tree of Life Taxonomy (OTT) and get a unique numeric identifier called the OTT id.
+For dolphins this is the number `r tnrs_dolphins$ott_id`. 
+The next step is to use the OTT id in the function that gets a subtree from Open Tree:
+
+```{r}
+tol_subtree(ott_id = tnrs_dolphins$ott_id) -> dolphins_subtree
+```
+
+```{r}
+str(dolphins_subtree)
+class(dolphins_subtree)
+```
+
+```{r}
+plot.phylo(x = dolphins_subtree)
+```
+
+```{r}
+Ntip(dolphins_subtree)
+```
+
+### Getting a tree for a set of taxa
+
+Sometime we have very lareg groups and we just want to get a small tree representing some lineages inside the group.
+
+For example, we just want a tree of all orders in amphibians. We know the common names of these which are frogs, salamanders and cecilians.
+
+We want to find this lineages in the Open Tree of Life; the steps to do this are:
+
+1. Get the scientific names of our taxa
+
+```{r}
+c("anura", "urodela", "gymnophiona") -> amphibian_orders
+```
+
+2. Match the scientific names to the OTT to get a unique numeric identifier
+
+```{r}
+tnrs_match_names(names = amphibian_orders) -> amph_order_tnrs
+amph_order_tnrs
+```
+
+We have two columns at the beginning, search string contains the names that we provided, and unique_name contains the most updated or official or most commonly used taxonomic names for the search taxon that we provided.
+
+3. Next stp is to use the OTT ids that we got to extract the tree conta8ining those lineages.
+If we have only one name or lineage, we can use `tol_subree()`.
+If we have more than one names, we will use `tol_induced_subtree()`.
+
+```{r}
+tol_induced_subtree(ott_ids = amph_order_tnrs$ott_id) -> amp_order_tree
+amp_order_tree
+```
+
+```{r}
+plot.phylo(x = amp_order_tree)
+```
+
+### Getting a tree of all families within amphibians
 
 
+Install the `datelife` R package from GitHub, with a function from teh package `remotes`:
+
+```{r}
+library(remotes) # or install.packages("remotes")
+install_github(repo = "phylotastic/datelife")
+```
+
+Now we can use the `datelife` package, but we have to load it first
+```{r}
+library(datelife)
+```
+
+We are going to use a function that extracts all the names from a taxon that belong to a given named rank. The function is called `get_ott_children()`:
+
+```{r}
+#?get_ott_children
+get_ott_children(ott_ids = tnrs$ott_id, ott_rank = "family") -> amphibian_families
+amphibian_families
+```
+
+Use the ott ids for all families to get an induced subtree:
+
+```{r}
+tol_induced_subtree(ott_ids = amphibian_families$Amphibia$ott_id) -> amp_fam_subtree
+amp_fam_subtree
+```
+```{r, fig.height= 20}
+plot.phylo(amp_fam_subtree)
+```
+
+Exercise:
+
+1. Extract the names of the taxa from your data set for the final project.
+2. Match them to the OTT using TNRS with the function `tnrs_match_names()`
+3. Use the OTT ids to get an induced subtree with the function `tol_induced_subtree()`. 
+
+I'll use the CSV file of the diet of Canis lupus, that we got form here https://datadryad.org/stash/dataset/doi:10.5061%2Fdryad.zgmsbccgg, as an example
+
+```{r}
+read.csv(file = "../data-raw/scat_RRA.csv") -> scat
+head(scat)
+```
+
+We do not really have access to the subspecies names of the wolves, only their packs.
+So we can start by creating a tree for the preys.
+First, extract the scientific names:
+
+```{r}
+library(dplyr)
+scat$Prey %>% 
+  unique() %>% 
+  tnrs_match_names() -> prey_ott_tnrs # match the scientific names to the Open Tree of Life Taxonomy
+
+```
+
+```{r error=TRUE}
+prey_ott_tnrs %>% 
+  filter(!is.na(ott_id)) -> prey_ott_tnrs
+
+tol_induced_subtree(ott_ids = prey_ott_tnrs$ott_id)
+```
 
 
 

@@ -1,0 +1,775 @@
+SampleNumber,BioYear,pack,hr_type,Prey,mean_read_count,total_reads_sample,prop_reads_sample
+6,2014,Honker,annual,Odocoileus hemionus,24852.5,24852.5,1
+7,2014,Honker,annual,Odocoileus hemionus,112592,112592,1
+8,2014,Snow Pass,annual,Odocoileus hemionus,3585.5,5758,0.622698854
+8,2014,Snow Pass,annual,Lontra canadensis,1475.5,5758,0.256252171
+8,2014,Snow Pass,annual,Phoca vitulina,697,5758,0.121048975
+9,2014,Trocadero,annual,Odocoileus hemionus,40730,40730,1
+10,2015,Ratz,annual,Odocoileus hemionus,243844,243844,1
+11,2015,Honker,den,Odocoileus hemionus,41005.5,41005.5,1
+12,2015,Honker,annual,Odocoileus hemionus,1162,1162,1
+13,2014,NA,NA,Odocoileus hemionus,16519.75,21279.75,0.776313162
+13,2014,NA,NA,Martes americana,3639.5,21279.75,0.171031145
+13,2014,NA,NA,Sylvilagus sp.,1120.5,21279.75,0.052655694
+14,2015,Honker,annual,Castor canadensis,47364.6667,136226.6667,0.347690124
+14,2015,Honker,annual,Sus scrofa domesticus,87662,136226.6667,0.643501028
+14,2015,Honker,annual,Odocoileus hemionus,1200,136226.6667,0.008808848
+15,2015,Honker,den,Castor canadensis,21485.6667,30058.00003,0.714806929
+15,2015,Honker,den,Odocoileus hemionus,8572.33333,30058.00003,0.285193071
+16,2015,Honker,den,Odocoileus hemionus,685,685,1
+17,2015,Honker,den,Castor canadensis,74413.25,80325.75,0.926393467
+17,2015,Honker,den,Odocoileus hemionus,5912.5,80325.75,0.073606533
+18,2015,Honker,den,Odocoileus hemionus,77486.75,78687.75,0.984737141
+18,2015,Honker,den,Castor canadensis,1201,78687.75,0.015262859
+20,2015,Honker,den,Odocoileus hemionus,382718.75,388158.25,0.985986386
+20,2015,Honker,den,Castor canadensis,5439.5,388158.25,0.014013614
+21,2015,Honker,den,Odocoileus hemionus,282771.75,283606.75,0.997055782
+21,2015,Honker,den,Castor canadensis,835,283606.75,0.002944218
+22,2015,Honker,den,Odocoileus hemionus,97773.3333,97773.3333,1
+23,2014,NA,NA,Odocoileus hemionus,282397.75,290647.5,0.971615961
+23,2014,NA,NA,Castor canadensis,5933.75,290647.5,0.020415624
+23,2014,NA,NA,Turdus migratorius,2316,290647.5,0.007968415
+24,2014,Honker,annual,Odocoileus hemionus,24129,24129,1
+25,2015,Honker,annual,Odocoileus hemionus,70694.25,75141.25,0.940818126
+25,2015,Honker,annual,Microtus sp.,4447,75141.25,0.059181874
+26,2015,Sandy Beach,annual,Lontra canadensis,5062,6174,0.819889861
+26,2015,Sandy Beach,annual,Odocoileus hemionus,1112,6174,0.180110139
+27,2015,Honker,annual,Odocoileus hemionus,158261.75,158261.75,1
+28,2015,Honker,annual,Odocoileus hemionus,58314.75,58520.75,0.996479881
+28,2015,Honker,annual,Castor canadensis,206,58520.75,0.003520119
+29,2015,Sandy Beach,annual,Odocoileus hemionus,22065.5,30953.16667,0.712867289
+29,2015,Sandy Beach,annual,Castor canadensis,8887.66667,30953.16667,0.287132711
+30,2015,Staney,annual,Odocoileus hemionus,164609.25,166057.25,0.991280116
+30,2015,Staney,annual,Lontra canadensis,1448,166057.25,0.008719884
+31,2015,Honker,annual,Castor canadensis,54478.5,61243,0.88954656
+31,2015,Honker,annual,Odocoileus hemionus,6425.5,61243,0.104918113
+31,2015,Honker,annual,Sus scrofa domesticus,339,61243,0.005535326
+33,2015,Honker,annual,Odocoileus hemionus,108484.25,108723.75,0.997797169
+33,2015,Honker,annual,Castor canadensis,239.5,108723.75,0.002202831
+34,2015,Staney,annual,Odocoileus hemionus,234073.5,238206.25,0.982650539
+34,2015,Staney,annual,Castor canadensis,4132.75,238206.25,0.017349461
+35,2015,Staney,annual,Odocoileus hemionus,10137.5,10137.5,1
+36,2015,Ratz,annual,Odocoileus hemionus,20242.25,24661.91667,0.820789814
+36,2015,Ratz,annual,Castor canadensis,4419.66667,24661.91667,0.179210186
+37,2015,Sandy Beach,annual,Odocoileus hemionus,12834,13350,0.961348315
+37,2015,Sandy Beach,annual,Castor canadensis,516,13350,0.038651685
+38,2015,Honker,annual,Odocoileus hemionus,142604.5,143123.5,0.996373761
+38,2015,Honker,annual,Ursus americanus,519,143123.5,0.003626239
+39,2015,Honker,annual,Castor canadensis,241096.75,251968.75,0.956851792
+39,2015,Honker,annual,Odocoileus hemionus,10872,251968.75,0.043148208
+40,2015,Honker,den,Odocoileus hemionus,85575,89977,0.951076386
+40,2015,Honker,den,Ursus americanus,2638.5,89977,0.029324161
+40,2015,Honker,den,Castor canadensis,1763.5,89977,0.019599453
+41,2014,NA,NA,Castor canadensis,437919.25,453104.5,0.966486208
+41,2014,NA,NA,Odocoileus hemionus,13941.25,453104.5,0.030768289
+41,2014,NA,NA,Ursus americanus,1244,453104.5,0.002745504
+42,2015,Honker,den,Odocoileus hemionus,21682.25,22797.25,0.951090592
+42,2015,Honker,den,Sus scrofa domesticus,1115,22797.25,0.048909408
+43,2015,Honker,den,Odocoileus hemionus,16300.75,24807.91667,0.657078553
+43,2015,Honker,den,Castor canadensis,6491.5,24807.91667,0.261670502
+43,2015,Honker,den,Ursus americanus,2015.66667,24807.91667,0.081250945
+44,2014,NA,NA,Castor canadensis,88913.25,118517.75,0.750210412
+44,2014,NA,NA,Odocoileus hemionus,29604.5,118517.75,0.249789588
+45,2015,Honker,den,Odocoileus hemionus,20190.5,20190.5,1
+46,2015,Honker,annual,Odocoileus hemionus,161024.25,162428.75,0.991353132
+46,2015,Honker,annual,Peromyscus keeni,1404.5,162428.75,0.008646868
+47,2015,Trocadero,annual,Odocoileus hemionus,70482.25,72554.25,0.971442059
+47,2015,Trocadero,annual,Oncorhynchus kisutch,1483,72554.25,0.020439878
+47,2015,Trocadero,annual,Ursus americanus,589,72554.25,0.008118063
+48,2015,Honker,annual,Odocoileus hemionus,11279.75,15591.75,0.723443488
+48,2015,Honker,annual,Castor canadensis,3094.5,15591.75,0.198470345
+48,2015,Honker,annual,Ursus americanus,1217.5,15591.75,0.078086167
+49,2015,Honker,annual,Odocoileus hemionus,349723.5,356076,0.982159707
+49,2015,Honker,annual,Castor canadensis,3713.5,356076,0.010428953
+49,2015,Honker,annual,Junco hyemalis,2639,356076,0.007411339
+50,2015,Honker,annual,Castor canadensis,87356.25,108607.5,0.804329811
+50,2015,Honker,annual,Odocoileus hemionus,21251.25,108607.5,0.195670189
+52,2014,Honker,annual,Odocoileus hemionus,133954.25,135292.75,0.990106639
+52,2014,Honker,annual,Castor canadensis,1338.5,135292.75,0.009893361
+53,2015,Honker,annual,Odocoileus hemionus,262735.25,263238.25,0.998089183
+53,2015,Honker,annual,Ursus americanus,503,263238.25,0.001910817
+54,2015,Honker,annual,Odocoileus hemionus,61061.5,64543.83333,0.946047002
+54,2015,Honker,annual,Haliaeetus leucocephalus,1409,64543.83333,0.021830126
+54,2015,Honker,annual,Oncorhynchus kisutch,717,64543.83333,0.01110873
+54,2015,Honker,annual,Ursus americanus,681.333333,64543.83333,0.010556134
+54,2015,Honker,annual,Castor canadensis,675,64543.83333,0.010458009
+55,2015,Honker,annual,Odocoileus hemionus,90898.5,106544,0.853154565
+55,2015,Honker,annual,Castor canadensis,13454.5,106544,0.126281161
+55,2015,Honker,annual,Ursus americanus,2191,106544,0.020564274
+56,2015,Tuxekan,annual,Castor canadensis,99092.75,106922.75,0.92676956
+56,2015,Tuxekan,annual,Odocoileus hemionus,7830,106922.75,0.07323044
+57,2015,Tuxekan,annual,Odocoileus hemionus,31543,31798,0.991980628
+57,2015,Tuxekan,annual,Castor canadensis,255,31798,0.008019372
+58,2015,Tuxekan,annual,Odocoileus hemionus,89846,89846,1
+59,2015,Tuxekan,annual,Castor canadensis,73963.5,92381.25,0.800633245
+59,2015,Tuxekan,annual,Odocoileus hemionus,18417.75,92381.25,0.199366755
+60,2015,Sandy Beach,annual,Lontra canadensis,134342.5,140653.8333,0.955128608
+60,2015,Sandy Beach,annual,Odocoileus hemionus,4906,140653.8333,0.034879959
+60,2015,Sandy Beach,annual,Ursus americanus,897.333333,140653.8333,0.006379729
+60,2015,Sandy Beach,annual,Castor canadensis,508,140653.8333,0.003611704
+61,2015,Sandy Beach,annual,Lontra canadensis,71408,71744,0.995316682
+61,2015,Sandy Beach,annual,Odocoileus hemionus,336,71744,0.004683318
+63,2015,Honker,annual,Odocoileus hemionus,11989.25,13066.25,0.917573902
+63,2015,Honker,annual,Lontra canadensis,1077,13066.25,0.082426098
+64,2015,Honker,annual,Odocoileus hemionus,28334.3333,28819.3333,0.983171019
+64,2015,Honker,annual,Castor canadensis,485,28819.3333,0.016828981
+65,2015,Honker,annual,Odocoileus hemionus,1869.75,2205.75,0.84767086
+65,2015,Honker,annual,Castor canadensis,336,2205.75,0.15232914
+66,2015,Honker,annual,Odocoileus hemionus,50560.5,50560.5,1
+67,2014,Honker,annual,Odocoileus hemionus,144933.75,145439.75,0.996520896
+67,2014,Honker,annual,Castor canadensis,506,145439.75,0.003479104
+68,2014,Honker,annual,Ursus americanus,1612,2484,0.648953301
+68,2014,Honker,annual,Odocoileus hemionus,872,2484,0.351046699
+70,2014,Honker,annual,Ursus americanus,10279,16330.75,0.629426083
+70,2014,Honker,annual,Odocoileus hemionus,6051.75,16330.75,0.370573917
+71,2014,Trocadero,annual,Castor canadensis,40643,46330,0.877250162
+71,2014,Trocadero,annual,Odocoileus hemionus,5687,46330,0.122749838
+72,2014,Honker,annual,Castor canadensis,145816.5,150032.5,0.971899422
+72,2014,Honker,annual,Odocoileus hemionus,4216,150032.5,0.028100578
+73,2014,Honker,annual,Odocoileus hemionus,4358.75,6051.75,0.72024621
+73,2014,Honker,annual,Castor canadensis,1062,6051.75,0.17548643
+73,2014,Honker,annual,Ursus americanus,631,6051.75,0.104267361
+95,2014,Trocadero,annual,Ursus americanus,43772,45029.66667,0.972070265
+95,2014,Trocadero,annual,Odocoileus hemionus,1257.66667,45029.66667,0.027929735
+96,2014,Trocadero,annual,Odocoileus hemionus,9031.25,12520.25,0.721331443
+96,2014,Trocadero,annual,Ursus americanus,2041.5,12520.25,0.16305585
+96,2014,Trocadero,annual,Pica sp.,607,12520.25,0.04848146
+96,2014,Trocadero,annual,Castor canadensis,571.5,12520.25,0.045646053
+96,2014,Trocadero,annual,Oncorhynchus kisutch,269,12520.25,0.021485194
+97,2014,Trocadero,annual,Odocoileus hemionus,1998.75,5021.91667,0.398005409
+97,2014,Trocadero,annual,Ursus americanus,1605.66667,5021.91667,0.319731843
+97,2014,Trocadero,annual,Castor canadensis,1417.5,5021.91667,0.282262748
+99,2014,Honker,annual,Odocoileus hemionus,1590.75,1590.75,1
+100,2014,Honker,annual,Odocoileus hemionus,6228.5,7541.5,0.825896705
+100,2014,Honker,annual,Ursus americanus,772,7541.5,0.102366903
+100,2014,Honker,annual,Castor canadensis,541,7541.5,0.071736392
+101,2015,Sandy Beach,annual,Odocoileus hemionus,24929.5,25976,0.959712812
+101,2015,Sandy Beach,annual,Ursus americanus,1046.5,25976,0.040287188
+102,2015,Sandy Beach,annual,Odocoileus hemionus,8331.25,8331.25,1
+104,2015,Honker,annual,Odocoileus hemionus,239287.5,239287.5,1
+105,2015,Honker,annual,Odocoileus hemionus,13973.75,15310.75,0.912675734
+105,2015,Honker,annual,Castor canadensis,1337,15310.75,0.087324266
+106,2015,Honker,annual,Odocoileus hemionus,206163.75,209017.4167,0.98634723
+106,2015,Honker,annual,Castor canadensis,2853.66667,209017.4167,0.01365277
+107,2015,Honker,annual,Odocoileus hemionus,152035,152035,1
+108,2015,Honker,annual,Odocoileus hemionus,7884.66667,7884.66667,1
+109,2015,Honker,annual,Odocoileus hemionus,354856,357720,0.991993738
+109,2015,Honker,annual,Ursus americanus,2864,357720,0.008006262
+110,2015,Honker,annual,Odocoileus hemionus,78173,78173,1
+111,2015,Honker,annual,Castor canadensis,5641,6806.33333,0.828786915
+111,2015,Honker,annual,Odocoileus hemionus,1165.33333,6806.33333,0.171213085
+112,2015,Honker,annual,Odocoileus hemionus,410329.75,410329.75,1
+113,2015,Honker,annual,Oncorhynchus gorbuscha,4269,8070,0.528996283
+113,2015,Honker,annual,Odocoileus hemionus,1941.66667,8070,0.240603057
+113,2015,Honker,annual,Castor canadensis,1859.33333,8070,0.23040066
+114,2015,Honker,annual,Anaxyrus boreas,963,88939.66667,0.010827565
+114,2015,Honker,annual,Castor canadensis,640,88939.66667,0.007195889
+114,2015,Honker,annual,Haliaeetus leucocephalus,3540.66667,88939.66667,0.039809759
+114,2015,Honker,annual,Odocoileus hemionus,79223,88939.66667,0.890749909
+114,2015,Honker,annual,Microtus sp.,1184,88939.66667,0.013312395
+114,2015,Honker,annual,Oncorhynchus kisutch,233,88939.66667,0.002619753
+114,2015,Honker,annual,Sturnus vulgaris,2450,88939.66667,0.027546764
+114,2015,Honker,annual,Ursus americanus,706,88939.66667,0.007937965
+115,2015,Honker,annual,Odocoileus hemionus,109137.333,109137.333,1
+117,2014,Honker,annual,Odocoileus hemionus,105284.25,105284.25,1
+118,2014,Ratz,annual,Odocoileus hemionus,169633,172808.3333,0.981625115
+118,2014,Ratz,annual,Ursus americanus,3175.33333,172808.3333,0.018374885
+119,2014,Honker,annual,Castor canadensis,4547.5,7643.5,0.594949957
+119,2014,Honker,annual,Odocoileus hemionus,3096,7643.5,0.405050043
+120,2014,Trocadero,annual,Odocoileus hemionus,22634.25,23810.75,0.950589545
+120,2014,Trocadero,annual,Oncorhynchus gorbuscha,1176.5,23810.75,0.049410455
+121,2014,Honker,annual,Odocoileus hemionus,14395,14395,1
+122,2014,Honker,annual,Odocoileus hemionus,21415.5,21415.5,1
+123,2014,Honker,annual,Odocoileus hemionus,38881,38881,1
+129,2015,Trocadero,annual,Oncorhynchus gorbuscha,86988.75,231051.25,0.376491146
+129,2015,Trocadero,annual,Ursus americanus,74063.75,231051.25,0.320551176
+129,2015,Trocadero,annual,Oncorhynchus mykiss,68854.75,231051.25,0.298006395
+129,2015,Trocadero,annual,Lontra canadensis,598,231051.25,0.00258817
+129,2015,Trocadero,annual,Odocoileus hemionus,546,231051.25,0.002363112
+130,2015,Staney,annual,Oncorhynchus gorbuscha,34568.5,400184.25,0.086381461
+130,2015,Staney,annual,Ursus americanus,361801,400184.25,0.904086055
+130,2015,Staney,annual,Odocoileus hemionus,3814.75,400184.25,0.009532484
+131,2015,Trocadero,annual,Odocoileus hemionus,30888.75,30888.75,1
+133,2015,Honker,annual,Odocoileus hemionus,22045.5,23373.5,0.94318352
+133,2015,Honker,annual,Ursus americanus,1017,23373.5,0.043510814
+133,2015,Honker,annual,Oncorhynchus gorbuscha,311,23373.5,0.013305667
+134,2015,Old Franks,annual,Odocoileus hemionus,187827.5,189590,0.990703624
+134,2015,Old Franks,annual,Ursus americanus,1762.5,189590,0.009296376
+135,2015,Staney,annual,Castor canadensis,42047.25,49129.83333,0.855839459
+135,2015,Staney,annual,Odocoileus hemionus,5409.25,49129.83333,0.110101127
+135,2015,Staney,annual,Ursus americanus,1000.33333,49129.83333,0.020361016
+135,2015,Staney,annual,Lontra canadensis,673,49129.83333,0.013698398
+136,2015,Ratz,annual,Ursus americanus,179483,181867.3333,0.986889711
+136,2015,Ratz,annual,Oncorhynchus gorbuscha,1219,181867.3333,0.006702688
+136,2015,Ratz,annual,Odocoileus hemionus,1165.33333,181867.3333,0.006407601
+137,2015,Staney,annual,Odocoileus hemionus,3281.25,6510.583333,0.503987098
+137,2015,Staney,annual,Lontra canadensis,1734,6510.583333,0.266335582
+137,2015,Staney,annual,Ursus americanus,1495.333333,6510.583333,0.22967732
+138,2015,Staney,annual,Odocoileus hemionus,1978,1978,1
+139,2015,Ratz,annual,Odocoileus hemionus,115333.5,116971.5,0.985996589
+139,2015,Ratz,annual,Ursus americanus,1638,116971.5,0.014003411
+140,2015,Ratz,annual,Odocoileus hemionus,3795,4376,0.867230347
+140,2015,Ratz,annual,Ursus americanus,581,4376,0.132769653
+141,2015,Ratz,annual,Odocoileus hemionus,61369.3333,101404.3333,0.605194387
+141,2015,Ratz,annual,Ursus americanus,40035,101404.3333,0.394805613
+142,2015,Staney,annual,Odocoileus hemionus,1747.5,1747.5,1
+143,2015,Honker,annual,Odocoileus hemionus,232231.75,232231.75,1
+145,2015,Honker,annual,Odocoileus hemionus,78925.5,78925.5,1
+146,2015,Honker,annual,Odocoileus hemionus,96027.5,96611.5,0.993955171
+146,2015,Honker,annual,Ursus americanus,584,96611.5,0.006044829
+147,2015,Honker,annual,Oncorhynchus kisutch,199736.75,379892.25,0.52577211
+147,2015,Honker,annual,Ursus americanus,168264.25,379892.25,0.442926251
+147,2015,Honker,annual,Odocoileus hemionus,11891.25,379892.25,0.031301639
+148,2015,Honker,annual,Odocoileus hemionus,7045.25,9570.75,0.736123083
+148,2015,Honker,annual,Castor canadensis,2525.5,9570.75,0.263876917
+149,2015,Honker,annual,Odocoileus hemionus,2705.75,2705.75,1
+150,2015,Honker,annual,Odocoileus hemionus,71763.6667,73882.00003,0.971328154
+150,2015,Honker,annual,Ursus americanus,2118.33333,73882.00003,0.028671846
+151,2015,Ratz,annual,Odocoileus hemionus,364892,368927,0.989062877
+151,2015,Ratz,annual,Lontra canadensis,2780,368927,0.007535366
+151,2015,Ratz,annual,Castor canadensis,1255,368927,0.003401757
+152,2015,Ratz,annual,Odocoileus hemionus,33832.5,34477.5,0.981292147
+152,2015,Ratz,annual,Ursus americanus,645,34477.5,0.018707853
+153,2015,Ratz,annual,Odocoileus hemionus,3111,3111,1
+155,2015,Honker,annual,Odocoileus hemionus,47852.75,101955.75,0.469348222
+155,2015,Honker,annual,Oncorhynchus kisutch,24364.75,101955.75,0.23897377
+155,2015,Honker,annual,Castor canadensis,20788.25,101955.75,0.203894827
+155,2015,Honker,annual,Ursus americanus,8950,101955.75,0.08778318
+156,2014,Staney,annual,Odocoileus hemionus,1374,1374,1
+157,2015,Sandy Beach,annual,Ursus americanus,2757.25,3899.25,0.707123165
+157,2015,Sandy Beach,annual,Odocoileus hemionus,1142,3899.25,0.292876835
+158,2015,Snow Pass,annual,Odocoileus hemionus,561,561,1
+159,2015,Trocadero,annual,Odocoileus hemionus,3240.25,3240.25,1
+161,2015,Honker,den,Odocoileus hemionus,6795.25,6795.25,1
+162,2015,Trocadero,annual,Ursus americanus,2895.75,4984.08333,0.580999516
+162,2015,Trocadero,annual,Odocoileus hemionus,1419.33333,4984.08333,0.284773194
+162,2015,Trocadero,annual,Oncorhynchus kisutch,669,4984.08333,0.13422729
+163,2015,Trocadero,annual,Odocoileus hemionus,1203,1203,1
+164,2015,Trocadero,annual,Odocoileus hemionus,1431,1810,0.790607735
+164,2015,Trocadero,annual,Castor canadensis,379,1810,0.209392265
+165,2015,Trocadero,annual,Odocoileus hemionus,1336,1336,1
+166,2015,NA,NA,Odocoileus hemionus,26709,28002,0.953824727
+166,2015,NA,NA,Haliaeetus leucocephalus,1293,28002,0.046175273
+167,2015,Trocadero,annual,Odocoileus hemionus,2031.25,2031.25,1
+168,2015,Trocadero,annual,Odocoileus hemionus,3397.5,3397.5,1
+169,2015,Trocadero,annual,Castor canadensis,5746.25,9704,0.592152721
+169,2015,Trocadero,annual,Odocoileus hemionus,3957.75,9704,0.407847279
+170,2015,Trocadero,annual,Odocoileus hemionus,1731.66667,2473.66667,0.700040426
+170,2015,Trocadero,annual,Oncorhynchus gorbuscha,742,2473.66667,0.299959574
+171,2015,Trocadero,annual,Odocoileus hemionus,13727,20370.5,0.673866621
+171,2015,Trocadero,annual,Castor canadensis,5188.5,20370.5,0.254706561
+171,2015,Trocadero,annual,Oncorhynchus gorbuscha,1455,20370.5,0.071426818
+172,2015,Trocadero,annual,Castor canadensis,872154.75,878685,0.992568156
+172,2015,Trocadero,annual,Odocoileus hemionus,5816.25,878685,0.006619266
+172,2015,Trocadero,annual,Haliaeetus leucocephalus,714,878685,8.13E-04
+173,2015,Trocadero,annual,Odocoileus hemionus,3673,5137.5,0.714939173
+173,2015,Trocadero,annual,Castor canadensis,1464.5,5137.5,0.285060827
+174,2015,Trocadero,annual,Oncorhynchus gorbuscha,184711,208270.0833,0.886882057
+174,2015,Trocadero,annual,Haliaeetus leucocephalus,14869,208270.0833,0.071392875
+174,2015,Trocadero,annual,Odocoileus hemionus,6031.75,208270.0833,0.028961193
+174,2015,Trocadero,annual,Castor canadensis,2658.33333,208270.0833,0.012763875
+175,2015,Trocadero,annual,Oncorhynchus gorbuscha,208945,258176.75,0.809309901
+175,2015,Trocadero,annual,Haliaeetus leucocephalus,31342.5,258176.75,0.12139939
+175,2015,Trocadero,annual,Odocoileus hemionus,9638,258176.75,0.037331015
+175,2015,Trocadero,annual,Castor canadensis,8251.25,258176.75,0.031959694
+176,2015,Trocadero,annual,Castor canadensis,5975.75,12555,0.475965751
+176,2015,Trocadero,annual,Odocoileus hemionus,5819.25,12555,0.463500597
+176,2015,Trocadero,annual,Haliaeetus leucocephalus,760,12555,0.060533652
+177,2015,Trocadero,annual,Odocoileus hemionus,61831.25,64189,0.963268629
+177,2015,Trocadero,annual,Castor canadensis,1826.75,64189,0.028458926
+177,2015,Trocadero,annual,Anas sp.,531,64189,0.008272445
+179,2015,Snow Pass,annual,Odocoileus hemionus,61808.66667,61808.66667,1
+181,2015,Trocadero,annual,Odocoileus hemionus,116310,116310,1
+182,2015,Trocadero,annual,Odocoileus hemionus,37410.33333,37410.33333,1
+183,2015,Honker,annual,Castor canadensis,41854.33333,41854.33333,1
+184,2015,Honker,annual,Odocoileus hemionus,60402.33333,60402.33333,1
+186,2015,Staney,annual,Odocoileus hemionus,93943.33333,93943.33333,1
+187,2015,NA,NA,Odocoileus hemionus,93943.33333,93943.33333,1
+188,2015,NA,NA,Oncorhynchus sp.,1910.333333,3384.333333,0.564463705
+188,2015,NA,NA,Odocoileus hemionus,1474,3384.333333,0.435536295
+189,2015,NA,NA,Odocoileus hemionus,6846,11260.33333,0.607974897
+189,2015,NA,NA,Oncorhynchus sp.,4414.333333,11260.33333,0.392025103
+216,2015,Trocadero,annual,Odocoileus hemionus,2523.333333,2523.333333,1
+217,2015,Trocadero,annual,Odocoileus hemionus,77060.66667,77060.66667,1
+218,2015,Staney,annual,Odocoileus hemionus,47764.33333,47764.33333,1
+219,2015,Staney,annual,Odocoileus hemionus,44076.66667,44076.66667,1
+220,2015,Trocadero,annual,Castor canadensis,8325,14229.5,0.58505218
+220,2015,Trocadero,annual,Gallus gallus,5904.5,14229.5,0.41494782
+221,2015,Trocadero,annual,Castor canadensis,7291,7291,1
+224,2015,Staney,annual,Odocoileus hemionus,124497.6667,124497.6667,1
+225,2015,Honker,annual,Odocoileus hemionus,60156,62013,0.970054666
+225,2015,Honker,annual,Microtus sp.,1857,62013,0.029945334
+226,2015,Honker,annual,Odocoileus hemionus,6992.666667,6992.666667,1
+227,2015,NA,NA,Odocoileus hemionus,81466.33333,81466.33333,1
+228,2015,Staney,annual,Odocoileus hemionus,106816,106816,1
+229,2015,Trocadero,annual,Odocoileus hemionus,63071.33333,63071.33333,1
+242,2015,Staney,annual,Odocoileus hemionus,18147.66667,25144.33333,0.721739822
+242,2015,Staney,annual,Castor canadensis,6996.666667,25144.33333,0.278260178
+243,2015,Honker,annual,Odocoileus hemionus,69282.33333,69282.33333,1
+244,2015,Honker,annual,Odocoileus hemionus,109184,109184,1
+245,2015,Honker,annual,Odocoileus hemionus,62730.66667,62730.66667,1
+246,2015,Snow Pass,annual,Odocoileus hemionus,55204,55204,1
+250,2015,Trocadero,annual,Chen caerulescens caerulescens,26887,48304.66667,0.556612888
+250,2015,Trocadero,annual,Odocoileus hemionus,21417.66667,48304.66667,0.443387112
+251,2015,Sandy Beach,annual,Odocoileus hemionus,24593,24593,1
+252,2015,Honker,annual,Castor canadensis,1628,1628,1
+306,2016,Sandy Beach,den,Odocoileus hemionus,66071.33333,71569.66667,0.923175088
+306,2016,Sandy Beach,den,Castor canadensis,5498.333333,71569.66667,0.076824912
+307,2016,Sandy Beach,den,Castor canadensis,17062.66667,17062.66667,1
+308,2016,Sandy Beach,den,Castor canadensis,1445.333333,1445.333333,1
+309,2016,Sandy Beach,den,Castor canadensis,1897.666667,1897.666667,1
+313,2016,NA,NA,Odocoileus hemionus,9229,9229,1
+314,2016,Sandy Beach,den,Odocoileus hemionus,31064.66667,31064.66667,1
+315,2016,Sandy Beach,den,Odocoileus hemionus,41882.66667,41882.66667,1
+318,2016,Karta,annual,Odocoileus hemionus,9229,9229,1
+319,2016,Karta,annual,Odocoileus hemionus,31064.66667,31064.66667,1
+320,2016,Sandy Beach,den,Odocoileus hemionus,41882.66667,41882.66667,1
+321,2016,Sandy Beach,den,Castor canadensis,67452.33333,67452.33333,1
+323,2016,Sandy Beach,den,Castor canadensis,350.6666667,350.6666667,1
+324,2016,Sandy Beach,den,Castor canadensis,3651,3651,1
+325,2016,Sandy Beach,den,Odocoileus hemionus,6601.333333,6601.333333,1
+326,2016,Sandy Beach,den,Odocoileus hemionus,61561,61561,1
+327,2016,Sandy Beach,den,Odocoileus hemionus,58425.66667,58425.66667,1
+328,2016,Sandy Beach,den,Odocoileus hemionus,26285.33333,26285.33333,1
+329,2016,Sandy Beach,annual,Odocoileus hemionus,43971.33333,44815,0.981174458
+329,2016,Sandy Beach,annual,Castor canadensis,843.6666667,44815,0.018825542
+330,2016,Sandy Beach,annual,Odocoileus hemionus,28358.33333,28358.33333,1
+331,2016,Karta,annual,Odocoileus hemionus,50010.33333,50010.33333,1
+332,2016,Karta,annual,Odocoileus hemionus,126059,126059,1
+333,2016,Karta,annual,Odocoileus hemionus,59360.33333,59360.33333,1
+334,2016,Karta,annual,Odocoileus hemionus,37961,38751,0.979613429
+334,2016,Karta,annual,Microtus sp.,790,38751,0.020386571
+335,2016,Karta,annual,Odocoileus hemionus,22238.66667,22238.66667,1
+336,2016,Karta,annual,Odocoileus hemionus,14644,14644,1
+337,2016,Ratz,den,Odocoileus hemionus,98863,103918.6667,0.951349774
+337,2016,Ratz,den,Castor canadensis,5055.666667,103918.6667,0.048650226
+338,2016,Ratz,den,Castor canadensis,35927.33333,35927.33333,1
+341,2016,Ratz,den,Castor canadensis,106698,127348,0.837845903
+341,2016,Ratz,den,Odocoileus hemionus,20650,127348,0.162154097
+342,2016,Ratz,den,Odocoileus hemionus,35341,37103.33333,0.952502021
+342,2016,Ratz,den,Castor canadensis,313.3333333,37103.33333,0.008444884
+342,2016,Ratz,den,Haliaeetus leucocephalus,1449,37103.33333,0.039053095
+345,2016,Ratz,den,Castor canadensis,5808.666667,5808.666667,1
+347,2016,Honker,annual,Odocoileus hemionus,15155.66667,137455.3333,0.110258848
+347,2016,Honker,annual,Ursus americanus,122299.6667,137455.3333,0.889741152
+348,2016,Honker,annual,Odocoileus hemionus,1152.333333,26021,0.044284744
+348,2016,Honker,annual,Castor canadensis,8897.666667,26021,0.341941765
+348,2016,Honker,annual,Martes americana,15971,26021,0.613773491
+350,2016,Honker,annual,Odocoileus hemionus,55070.66667,55070.66667,1
+352,2016,Sandy Beach,den,Odocoileus hemionus,3500.333333,124215,0.028179635
+352,2016,Sandy Beach,den,Castor canadensis,120714.6667,124215,0.971820365
+354,2016,Sandy Beach,den,Castor canadensis,4696,4696,1
+355,2016,Sandy Beach,annual,Odocoileus hemionus,65747.66667,65747.66667,1
+356,2016,Ratz,den,Odocoileus hemionus,51588,51588,1
+358,2016,Ratz,den,Odocoileus hemionus,85745.66667,85745.66667,1
+359,2016,Staney,den,Castor canadensis,18788.66667,37409,0.502249904
+359,2016,Staney,den,Odocoileus hemionus,18375,37409,0.491191959
+359,2016,Staney,den,Haliaeetus leucocephalus,245.3333333,37409,0.006558137
+360,2016,Staney,den,Odocoileus hemionus,127329,127329,1
+361,2016,Staney,den,Odocoileus hemionus,89047,89047,1
+362,2016,Staney,den,Odocoileus hemionus,36288,36288,1
+363,2016,Staney,den,Odocoileus hemionus,34639,34639,1
+364,2016,Staney,den,Odocoileus hemionus,48110.33333,106801,0.450467068
+364,2016,Staney,den,Castor canadensis,58690.66667,106801,0.549532932
+366,2016,Staney,annual,Odocoileus hemionus,128362.6667,134021.6667,0.957775484
+366,2016,Staney,annual,Ursus americanus,5659,134021.6667,0.042224516
+367,2016,Sandy Beach,den,Castor canadensis,2599.333333,2599.333333,1
+368,2016,Sandy Beach,den,Odocoileus hemionus,108654.3333,108654.3333,1
+369,2016,Sandy Beach,den,Castor canadensis,3193,3193,1
+370,2016,Ratz,den,Odocoileus hemionus,98968.33333,98968.33333,1
+371,2016,Ratz,den,Odocoileus hemionus,171463.3333,173225.3333,0.989828278
+371,2016,Ratz,den,Ursus americanus,548,173225.3333,0.00316351
+371,2016,Ratz,den,Antigone canadensis,1214,173225.3333,0.007008213
+375,2016,Sandy Beach,den,Odocoileus hemionus,136896.3333,143473,0.954160945
+375,2016,Sandy Beach,den,Passeriformes sp.,4600.333333,143473,0.032064105
+375,2016,Sandy Beach,den,Microtus sp.,1976.333333,143473,0.01377495
+376,2016,Ratz,den,Odocoileus hemionus,13399.66667,13399.66667,1
+377,2016,Honker,annual,Odocoileus hemionus,150051,156526.6667,0.958628988
+377,2016,Honker,annual,Junco hyemalis,6475.666667,156526.6667,0.041371012
+378,2016,Honker,annual,Odocoileus hemionus,143954,150944,0.953691435
+378,2016,Honker,annual,Ursus americanus,6990,150944,0.046308565
+381,2016,Hydaburg,den,Odocoileus hemionus,46908,46908,1
+384,2016,Hydaburg,den,Odocoileus hemionus,115446,115446,1
+386,2016,Hydaburg,den,Odocoileus hemionus,108615.6667,108615.6667,1
+387,2016,Hydaburg,den,Odocoileus hemionus,978,978,1
+388,2015,NA,NA,Odocoileus hemionus,25988.33333,25988.33333,1
+392,2016,Trocadero,annual,Odocoileus hemionus,38178.66667,38178.66667,1
+395,2016,Snow Pass,annual,Odocoileus hemionus,57330.66667,57545,0.996275379
+395,2016,Snow Pass,annual,Haliaeetus leucocephalus,214.3333333,57545,0.003724621
+396,2016,Trocadero,annual,Odocoileus hemionus,42987,42987,1
+397,2016,NA,NA,Odocoileus hemionus,21364.66667,22862,0.934505584
+397,2016,NA,NA,Castor canadensis,1497.333333,22862,0.065494416
+398,2016,Nossuk,annual,Odocoileus hemionus,23325.66667,23325.66667,1
+399,2016,Trocadero,annual,Gallus gallus,6345.5,6345.5,1
+404,2015,Honker,annual,Odocoileus hemionus,30865.75,30865.75,1
+405,2015,Honker,annual,Odocoileus hemionus,103642.75,105448.75,0.982873197
+405,2015,Honker,annual,Castor canadensis,918,105448.75,0.008705651
+405,2015,Honker,annual,Ursus americanus,888,105448.75,0.008421152
+406,2015,Ratz,annual,Odocoileus hemionus,95292.25,98557.25,0.966872046
+406,2015,Ratz,annual,Ursus americanus,2147,98557.25,0.021784293
+406,2015,Ratz,annual,Castor canadensis,1118,98557.25,0.011343661
+407,2015,Ratz,annual,Ursus americanus,21530.6667,121501.6667,0.177204702
+407,2015,Ratz,annual,Odocoileus hemionus,99971,121501.6667,0.822795298
+408,2015,Ratz,annual,Odocoileus hemionus,181799,184136,0.987308294
+408,2015,Ratz,annual,Castor canadensis,1267,184136,0.006880784
+408,2015,Ratz,annual,Ursus americanus,1070,184136,0.005810922
+409,2015,Ratz,annual,Odocoileus hemionus,93071,97304,0.956497164
+409,2015,Ratz,annual,Castor canadensis,4233,97304,0.043502836
+410,2015,NA,NA,Odocoileus hemionus,56424.75,56424.75,1
+581,2015,Ratz,annual,Odocoileus hemionus,38760,38760,1
+582,2015,Ratz,annual,Castor canadensis,47079.66667,47079.66667,1
+583,2015,Honker,annual,Odocoileus hemionus,6743,6743,1
+584,2015,Honker,annual,Odocoileus hemionus,70317.66667,70317.66667,1
+585,2015,Honker,annual,Odocoileus hemionus,55585.5,56322.5,0.986914643
+585,2015,Honker,annual,Castor canadensis,737,56322.5,0.013085357
+586,2015,Honker,annual,Castor canadensis,10855,10855,1
+588,2015,Honker,annual,Castor canadensis,10559,10559,1
+589,2015,Honker,annual,Odocoileus hemionus,19578.66667,19578.66667,1
+590,2015,Honker,annual,Lontra canadensis,6467.333333,6467.333333,1
+596,2016,Ratz,annual,Castor canadensis,104953.3333,104953.3333,1
+713,2015,Snow Pass,annual,Odocoileus hemionus,106756.6667,106756.6667,1
+717,2016,Honker,annual,Odocoileus hemionus,35085,36328,0.965783968
+717,2016,Honker,annual,Microtus sp.,1243,36328,0.034216032
+718,2016,Honker,annual,Odocoileus hemionus,20834,20834,1
+719,2016,NA,NA,Oncorhynchus gorbuscha,5976,5976,1
+720,2016,Staney,annual,Castor canadensis,2674,2674,1
+721,2016,Trocadero,annual,Odocoileus hemionus,93149,93149,1
+723,2016,Nossuk,annual,Odocoileus hemionus,72688,77513,0.937752377
+723,2016,Nossuk,annual,Castor canadensis,4825,77513,0.062247623
+724,2016,Staney,annual,Odocoileus hemionus,957,957,1
+725,2016,Snow Pass,den,Odocoileus hemionus,17722,17722,1
+730,2016,Nossuk,annual,Odocoileus hemionus,15034,15034,1
+733,2016,Trocadero,annual,Odocoileus hemionus,71009,71009,1
+735,2016,Snow Pass,annual,Phoca vitulina,2354,4673,0.503744918
+735,2016,Snow Pass,annual,Castor canadensis,2319,4673,0.496255082
+737,2016,Trocadero,annual,Odocoileus hemionus,60083,65130,0.922508828
+737,2016,Trocadero,annual,Oncorhynchus gorbuscha,5047,65130,0.077491172
+741,2016,Sandy Beach,annual,Odocoileus hemionus,7214,7214,1
+742,2016,Heceta,annual,Odocoileus hemionus,9411,9411,1
+743,2016,Heceta,annual,Castor canadensis,145309,145309,1
+746,2016,Heceta,annual,Odocoileus hemionus,5386,5386,1
+748,2016,Heceta,annual,Odocoileus hemionus,3627,3627,1
+749,2016,Honker,annual,Odocoileus hemionus,24047,24047,1
+750,2016,Snow Pass,annual,Odocoileus hemionus,25769,25769,1
+751,2016,Snow Pass,annual,Odocoileus hemionus,3257,3257,1
+754,2016,Snow Pass,annual,Xeneretmus latifrons,384,384,1
+802,2017,Snow Pass,den,Neovison vison,454,454,1
+803,2017,Snow Pass,den,Odocoileus hemionus,351,351,1
+804,2017,Snow Pass,den,Haliaeetus leucocephalus,31694,47968,0.660732155
+804,2017,Snow Pass,den,Neovison vison,16274,47968,0.339267845
+805,2017,Snow Pass,den,Neovison vison,1818,2335,0.778586724
+805,2017,Snow Pass,den,Haliaeetus leucocephalus,517,2335,0.221413276
+1008,2016,Heceta,annual,Odocoileus hemionus,482,482,1
+1011,2016,Heceta,annual,Phoca vitulina,10373.33333,10373.33333,1
+1013,2016,Heceta,annual,Odocoileus hemionus,11122,11122,1
+1014,2016,Heceta,annual,Odocoileus hemionus,5551.333333,11209.33333,0.49524206
+1014,2016,Heceta,annual,Enhydra lutris,4854,11209.33333,0.433031997
+1014,2016,Heceta,annual,Haliaeetus leucocephalus,804,11209.33333,0.071725943
+1015,2016,Heceta,annual,Odocoileus hemionus,11325,11325,1
+1016,2016,Heceta,annual,Odocoileus hemionus,12489.33333,12489.33333,1
+1019,2016,Heceta,annual,Odocoileus hemionus,203222.6667,203222.6667,1
+1020,2016,Staney,annual,Castor canadensis,21736,23687.33333,0.917621232
+1020,2016,Staney,annual,Odocoileus hemionus,1951.333333,23687.33333,0.082378768
+1021,2016,NA,NA,Castor canadensis,334489.3333,334489.3333,1
+1022,2016,NA,NA,Odocoileus hemionus,6338,6338,1
+1023,2016,Staney,annual,Castor canadensis,129241.3333,130791.3333,0.988149062
+1023,2016,Staney,annual,Odocoileus hemionus,1550,130791.3333,0.011850938
+1024,2016,NA,NA,Odocoileus hemionus,77302.66667,85707.33333,0.901937602
+1024,2016,NA,NA,Castor canadensis,8404.666667,85707.33333,0.098062398
+1025,2016,Staney,annual,Odocoileus hemionus,21352.66667,21352.66667,1
+1026,2016,Staney,annual,Odocoileus hemionus,66975.33333,66975.33333,1
+1027,2016,Staney,annual,Odocoileus hemionus,61223.33333,61223.33333,1
+1028,2016,Snow Pass,annual,Odocoileus hemionus,64184.66667,64184.66667,1
+1031,2016,Snow Pass,annual,Odocoileus hemionus,20041.33333,20041.33333,1
+1032,2016,Honker,annual,Castor canadensis,4356,4356,1
+1033,2016,Trocadero,annual,Odocoileus hemionus,4254.666667,4254.666667,1
+1034,2016,Trocadero,annual,Odocoileus hemionus,12785.66667,12785.66667,1
+1035,2016,Trocadero,annual,Odocoileus hemionus,22319.33333,22319.33333,1
+1036,2016,Trocadero,annual,Odocoileus hemionus,31048.33333,31048.33333,1
+1037,2016,Trocadero,annual,Odocoileus hemionus,18174,18174,1
+1038,2016,Hydaburg,annual,Odocoileus hemionus,17068,17068,1
+1039,2016,Hydaburg,annual,Odocoileus hemionus,9200,9200,1
+1040,2016,Hydaburg,annual,Odocoileus hemionus,7788,7788,1
+1041,2016,Hydaburg,annual,Odocoileus hemionus,4518,4518,1
+1042,2016,Hydaburg,annual,Odocoileus hemionus,1723.333333,1723.333333,1
+1043,2016,NA,NA,Odocoileus hemionus,113647.3333,113647.3333,1
+1045,2016,NA,NA,Odocoileus hemionus,53015,53015,1
+1047,2016,Trocadero,annual,Odocoileus hemionus,42603.33333,42603.33333,1
+1070,2017,Snow Pass,annual,Haliaeetus leucocephalus,2365.666667,3041,0.777923929
+1070,2017,Snow Pass,annual,Odocoileus hemionus,675.3333333,3041,0.222076071
+1072,2017,Honker,annual,Odocoileus hemionus,50689.33333,50689.33333,1
+1075,2016,Nossuk,annual,Odocoileus hemionus,20395.33333,20395.33333,1
+1076,2017,Trocadero,annual,Odocoileus hemionus,73151,73151,1
+1078,2017,Nossuk,annual,Odocoileus hemionus,33487.66667,33487.66667,1
+1079,2017,Snow Pass,annual,Odocoileus hemionus,79294,79294,1
+1080,2016,Trocadero,annual,Phoca vitulina,985,985,1
+1081,2017,Trocadero,annual,Odocoileus hemionus,154556,154556,1
+1082,2017,Staney,annual,Odocoileus hemionus,36793.33333,36793.33333,1
+1083,2017,Trocadero,annual,Odocoileus hemionus,88652,88652,1
+1084,2017,Nossuk,annual,Odocoileus hemionus,25466.66667,25466.66667,1
+1086,2017,Trocadero,annual,Ursus americanus,42629.33333,42629.33333,1
+1087,2016,Heceta,annual,Odocoileus hemionus,52448,52448,1
+1088,2016,Heceta,annual,Castor canadensis,69749,69749,1
+1089,2016,Heceta,annual,Odocoileus hemionus,21423.33333,21423.33333,1
+1090,2016,Heceta,annual,Phoca vitulina,288.3333333,288.3333333,1
+1091,2016,Heceta,annual,Enhydra lutris,129876.6667,134272,0.967265451
+1091,2016,Heceta,annual,Odocoileus hemionus,4395.333333,134272,0.032734549
+1093,2016,Honker,annual,Odocoileus hemionus,10566.66667,20434.33333,0.517103568
+1093,2016,Honker,annual,Castor canadensis,9867.666667,20434.33333,0.482896432
+1095,2016,Honker,annual,Odocoileus hemionus,114032.6667,114032.6667,1
+1096,2016,Honker,annual,Odocoileus hemionus,19151.33333,19483.66667,0.982942978
+1096,2016,Honker,annual,Castor canadensis,332.3333333,19483.66667,0.017057022
+1097,2016,Honker,annual,Odocoileus hemionus,6067,6067,1
+1098,2016,Honker,annual,Odocoileus hemionus,49492.66667,60251.66667,0.821432326
+1098,2016,Honker,annual,Castor canadensis,10759,60251.66667,0.178567674
+1099,2016,Honker,annual,Castor canadensis,43853,43853,1
+1102,2016,Sandy Beach,annual,Odocoileus hemionus,10023.66667,10023.66667,1
+1103,2016,Sandy Beach,annual,Odocoileus hemionus,16094.66667,16094.66667,1
+1104,2016,Sandy Beach,annual,Odocoileus hemionus,8767,8767,1
+1105,2016,Ratz,annual,Odocoileus hemionus,35734,35734,1
+1106,2016,Honker,annual,Odocoileus hemionus,50123,50123,1
+1107,2016,Ratz,annual,Odocoileus hemionus,57405.33333,57405.33333,1
+1110,2016,Ratz,annual,Odocoileus hemionus,2019.666667,2019.666667,1
+1114,2016,Heceta,annual,Castor canadensis,101853.6667,101853.6667,1
+1144,2017,Sandy Beach,annual,Odocoileus hemionus,5126,5126,1
+1165,2017,Snow Pass,annual,Falcipennis canadensis franklinii,169,706,0.239376771
+1165,2017,Snow Pass,annual,Haliaeetus leucocephalus,537,706,0.760623229
+1166,2017,NA,NA,Odocoileus hemionus,1425,1425,1
+1168,2017,Trocadero,annual,Odocoileus hemionus,744,744,1
+1169,2017,Snow Pass,annual,Phoca vitulina,4312,4312,1
+1170,2017,Snow Pass,annual,Neovison vison,620,620,1
+1171,2017,Trocadero,annual,Odocoileus hemionus,11912,11912,1
+1173,2017,Snow Pass,annual,Odocoileus hemionus,5406,5406,1
+1174,2017,NA,NA,Odocoileus hemionus,28259,28259,1
+1176,2017,Snow Pass,annual,Odocoileus hemionus,22007,22007,1
+1177,2017,Snow Pass,annual,Odocoileus hemionus,4599,4599,1
+1178,2017,Staney,annual,Castor canadensis,2648,2648,1
+1433,2017,NA,NA,Odocoileus hemionus,10046,10046,1
+1434,2018,Staney,den,Odocoileus hemionus,5720,5720,1
+1435,2018,Staney,annual,Odocoileus hemionus,299,299,1
+1436,2018,Staney,annual,Odocoileus hemionus,313,313,1
+1437,2018,Staney,annual,Odocoileus hemionus,12135,12135,1
+1439,2018,Staney,annual,Odocoileus hemionus,5593,5593,1
+1440,2018,Staney,den,Odocoileus hemionus,21602,21602,1
+1785,2018,Staney,annual,Odocoileus hemionus,1611,1611,1
+1786,2017,Honker,annual,Odocoileus hemionus,14453,14453,1
+1787,2018,Honker,annual,Odocoileus hemionus,14840,14840,1
+1788,2018,Honker,annual,Odocoileus hemionus,8641,8641,1
+1929,2020,Trocadero,annual,Odocoileus hemionus,44400,44400,1
+1930,2020,Trocadero,annual,Odocoileus hemionus,2680,2906.333333,0.922124097
+1930,2020,Trocadero,annual,Castor canadensis,226.3333333,2906.333333,0.077875903
+1931,2020,Trocadero,annual,Odocoileus hemionus,2202.666667,2202.666667,1
+1932,2020,Trocadero,annual,Odocoileus hemionus,36146.66667,36146.66667,1
+1933,2020,Trocadero,annual,Odocoileus hemionus,9289.333333,9289.333333,1
+2234,2020,Honker,annual,Oncorhynchus gorbuscha,98336.33333,126368.3333,0.778172274
+2234,2020,Honker,annual,Ursus americanus,28032,126368.3333,0.221827726
+2235,2020,Honker,annual,Odocoileus hemionus,6740.333333,6740.333333,1
+2250,2020,NA,NA,Odocoileus hemionus,21778,21778,1
+2251,2020,Staney,annual,Odocoileus hemionus,33218,33218,1
+2252,2020,Staney,annual,Odocoileus hemionus,9256,11347,0.815722217
+2252,2020,Staney,annual,Ursus americanus,2091,11347,0.184277783
+2254,2020,NA,NA,Odocoileus hemionus,47919,47919,1
+2255,2020,NA,NA,Denragapus fuliginosus,198,633,0.312796209
+2255,2020,NA,NA,Odocoileus hemionus,435,633,0.687203791
+2258,2020,Honker,annual,Odocoileus hemionus,1707,1707,1
+2259,2020,NA,NA,Odocoileus hemionus,5503,5503,1
+2260,2020,Trocadero,annual,Odocoileus hemionus,2043,4469,0.45714925
+2260,2020,Trocadero,annual,Ursus americanus,2426,4469,0.54285075
+2261,2020,NA,NA,Odocoileus hemionus,39359,39359,1
+2262,2020,Staney,annual,Microtus sp.,356,1954,0.182190379
+2262,2020,Staney,annual,Odocoileus hemionus,1598,1954,0.817809621
+2263,2020,Staney,annual,Lontra canadensis,19010,19010,1
+2264,2020,Snow Pass,annual,Enhydra lutris,2995,2995,1
+2265,2020,Honker,annual,Odocoileus hemionus,3942,3942,1
+2266,2020,Honker,annual,Microtus sp.,755,8391,0.089977357
+2266,2020,Honker,annual,Odocoileus hemionus,7636,8391,0.910022643
+2278,2020,Snow Pass,annual,Eumetopias jubatus,2558,2558,1
+2279,2020,Trocadero,annual,Odocoileus hemionus,7602,9929,0.765636016
+2279,2020,Trocadero,annual,Peromyscus keeni,2327,9929,0.234363984
+2281,2020,Snow Pass,annual,Odocoileus hemionus,24392,25146,0.970015112
+2281,2020,Snow Pass,annual,Phoca vitulina,754,25146,0.029984888
+2282,2020,Snow Pass,annual,Odocoileus hemionus,6459,6459,1
+2285,2020,Snow Pass,annual,Castor canadensis,1810,2700,0.67037037
+2285,2020,Snow Pass,annual,Odocoileus hemionus,890,2700,0.32962963
+2286,2020,Snow Pass,annual,Neovison vison,10428,10428,1
+2471,2016,Sandy Beach,den,Castor canadensis,33368,33368,1
+2472,2016,Sandy Beach,den,Castor canadensis,36,36,1
+2473,2016,Sandy Beach,den,Chen caerulescens caerulescens,2734,3359,0.813932718
+2473,2016,Sandy Beach,den,Odocoileus hemionus,625,3359,0.186067282
+2474,2016,Sandy Beach,den,Castor canadensis,79487,79487,1
+2475,2016,Staney,den,Odocoileus hemionus,14005,14005,1
+2476,2016,Staney,den,Odocoileus hemionus,330,330,1
+2483,2016,Staney,den,Odocoileus hemionus,18962,18962,1
+2484,2016,Ratz,den,Odocoileus hemionus,2373,2373,1
+2486,2016,Sandy Beach,den,Odocoileus hemionus,14747,14747,1
+2492,2016,Ratz,den,Odocoileus hemionus,2736,2736,1
+2494,2016,Staney,den,Odocoileus hemionus,42275,42275,1
+2495,2016,Hydaburg,den,Odocoileus hemionus,2928,2928,1
+2496,2016,Hydaburg,den,Odocoileus hemionus,26608,26608,1
+2497,2016,Hydaburg,annual,Odocoileus hemionus,19600,19600,1
+2498,2016,NA,NA,Odocoileus hemionus,12289,12760,0.963087774
+2498,2016,NA,NA,Ursus americanus,471,12760,0.036912226
+2499,2016,Hydaburg,annual,Odocoileus hemionus,74471,74471,1
+2500,2016,Hydaburg,den,Odocoileus hemionus,7584,7584,1
+2502,2016,Sandy Beach,den,Odocoileus hemionus,23801,31041,0.766760091
+2502,2016,Sandy Beach,den,Castor canadensis,7240,31041,0.233239909
+2505,2016,Ratz,den,Odocoileus hemionus,54314,54314,1
+2506,2016,Ratz,den,Odocoileus hemionus,10334,10334,1
+2509,2016,NA,NA,Antigone canadensis,720,68179,0.010560436
+2509,2016,NA,NA,Odocoileus hemionus,53934,68179,0.791064697
+2509,2016,NA,NA,Ursus americanus,13525,68179,0.198374866
+2510,2016,Hydaburg,den,Odocoileus hemionus,670,670,1
+2511,2016,Hydaburg,den,Odocoileus hemionus,22285,22285,1
+2512,2016,Hydaburg,den,Odocoileus hemionus,36582,36582,1
+2514,2016,Hydaburg,den,Odocoileus hemionus,23061,23061,1
+2515,2016,Hydaburg,den,Odocoileus hemionus,21578,21578,1
+2517,2016,Sandy Beach,den,Odocoileus hemionus,1116,1116,1
+2519,2016,Sandy Beach,den,Odocoileus hemionus,2990,2990,1
+2521,2016,Sandy Beach,den,Odocoileus hemionus,10937,12142,0.900757701
+2521,2016,Sandy Beach,den,Junco hyemalis,1205,12142,0.099242299
+2522,2016,Ratz,den,Ursus americanus,3358,3358,1
+2525,2016,Sandy Beach,den,Odocoileus hemionus,81704,81704,1
+2526,2017,Hydaburg,den,Odocoileus hemionus,669,669,1
+2527,2017,Hydaburg,den,Odocoileus hemionus,3097,3097,1
+2529,2017,Hydaburg,den,Odocoileus hemionus,7062,7062,1
+2531,2017,Hydaburg,den,Odocoileus hemionus,9020,9020,1
+2532,2017,Hydaburg,den,Odocoileus hemionus,6522,6742,0.967368733
+2532,2017,Hydaburg,den,Castor canadensis,220,6742,0.032631267
+2533,2017,Hydaburg,den,Odocoileus hemionus,3306,3306,1
+2534,2017,Hydaburg,den,Odocoileus hemionus,2840,2840,1
+2535,2017,Hydaburg,den,Odocoileus hemionus,774,774,1
+2536,2017,Hydaburg,den,Odocoileus hemionus,3146,3146,1
+2538,2017,Hydaburg,den,Odocoileus hemionus,3525,3525,1
+2540,2017,Hydaburg,den,Odocoileus hemionus,5283,5283,1
+2541,2017,Hydaburg,den,Odocoileus hemionus,55323,57258,0.966205596
+2541,2017,Hydaburg,den,Castor canadensis,1935,57258,0.033794404
+2542,2017,Trocadero,den,Odocoileus hemionus,31003,31003,1
+2543,2017,Trocadero,den,Odocoileus hemionus,12744,12744,1
+2544,2017,Trocadero,den,Odocoileus hemionus,4557,4557,1
+2547,2017,Trocadero,den,Odocoileus hemionus,9011,9011,1
+2548,2017,Trocadero,den,Odocoileus hemionus,841,841,1
+2549,2017,Trocadero,den,Odocoileus hemionus,3521,3521,1
+2551,2017,Trocadero,den,Odocoileus hemionus,1940,6971,0.278295797
+2551,2017,Trocadero,den,Lontra canadensis,5031,6971,0.721704203
+2552,2017,Trocadero,den,Odocoileus hemionus,7997,7997,1
+2553,2017,Trocadero,den,Odocoileus hemionus,13363,13363,1
+2554,2017,Trocadero,den,Odocoileus hemionus,261,880,0.296590909
+2554,2017,Trocadero,den,Lontra canadensis,619,880,0.703409091
+2555,2017,Trocadero,den,Odocoileus hemionus,1382,24694,0.055965012
+2555,2017,Trocadero,den,Lontra canadensis,23312,24694,0.944034988
+2557,2017,Sandy Beach,den,Odocoileus hemionus,10445,10445,1
+2558,2017,Sandy Beach,den,Odocoileus hemionus,7389,7389,1
+2559,2017,Sandy Beach,den,Odocoileus hemionus,68920,68920,1
+2560,2017,Ratz,annual,Odocoileus hemionus,51820,102547,0.505329264
+2560,2017,Ratz,annual,Ursus americanus,50727,102547,0.494670736
+2562,2017,Hydaburg,den,Odocoileus hemionus,251,251,1
+2563,2017,Hydaburg,den,Odocoileus hemionus,6002,6002,1
+2564,2017,Hydaburg,den,Odocoileus hemionus,2813,2965,0.948735245
+2564,2017,Hydaburg,den,Castor canadensis,152,2965,0.051264755
+2565,2017,Snow Pass,den,Cottidae sp.,379,379,1
+2566,2017,Snow Pass,den,Cottidae sp.,587,587,1
+2567,2017,Snow Pass,den,Ardea herodias,4388,9731,0.450930017
+2567,2017,Snow Pass,den,Odocoileus hemionus,5343,9731,0.549069983
+2568,2017,Snow Pass,den,Neovison vison,135,135,1
+2569,2017,Snow Pass,den,Neovison vison,9720,9720,1
+2570,2017,Snow Pass,den,Odocoileus hemionus,90204,90204,1
+2571,2017,Snow Pass,den,Haliaeetus leucocephalus,36178,36178,1
+2575,2017,Hydaburg,den,Odocoileus hemionus,22722,22722,1
+2576,2017,Hydaburg,den,Odocoileus hemionus,7439,7439,1
+2577,2017,Hydaburg,den,Odocoileus hemionus,20903,20903,1
+2580,2017,Hydaburg,den,Odocoileus hemionus,47759,47759,1
+2583,2017,Trocadero,den,Lontra canadensis,202,202,1
+2584,2017,Trocadero,den,Odocoileus hemionus,75270,85082,0.88467596
+2584,2017,Trocadero,den,Ursus americanus,9812,85082,0.11532404
+2587,2017,Old Franks,den,Odocoileus hemionus,6436,6436,1
+2589,2017,Sandy Beach,den,Odocoileus hemionus,18183,18183,1
+2591,2017,Sandy Beach,den,Odocoileus hemionus,15929,15929,1
+2592,2017,Sandy Beach,den,Odocoileus hemionus,38007,38007,1
+2593,2017,Sandy Beach,den,Odocoileus hemionus,26820,26820,1
+2594,2017,Sandy Beach,den,Odocoileus hemionus,22997,22997,1
+2595,2017,Sandy Beach,den,Odocoileus hemionus,22245,22245,1
+2596,2017,Sandy Beach,den,Odocoileus hemionus,32745,32745,1
+2598,2017,Sandy Beach,den,Odocoileus hemionus,1264,1264,1
+2599,2017,Sandy Beach,den,Odocoileus hemionus,14321,15342,0.933450658
+2599,2017,Sandy Beach,den,Junco hyemalis,1021,15342,0.066549342
+2601,2017,Sandy Beach,den,Odocoileus hemionus,40408,40408,1
+2602,2017,Sandy Beach,den,Odocoileus hemionus,66673,76743,0.868782821
+2602,2017,Sandy Beach,den,Junco hyemalis,10070,76743,0.131217179
+2603,2017,Trocadero,den,Odocoileus hemionus,44221,44221,1
+2610,2017,Trocadero,den,Odocoileus hemionus,45724,45724,1
+2615,2017,Trocadero,den,Odocoileus hemionus,17105,17105,1
+2617,2017,Trocadero,den,Odocoileus hemionus,4266,4266,1
+2624,2018,Honker,den,Odocoileus hemionus,35831,36339,0.986020529
+2624,2018,Honker,den,Chen caerulescens caerulescens,508,36339,0.013979471
+2625,2018,Hydaburg,den,Odocoileus hemionus,1105,1105,1
+2626,2018,Staney,den,Odocoileus hemionus,42524,42524,1
+2627,2018,Staney,den,Odocoileus hemionus,24133,24133,1
+2629,2018,Staney,den,Odocoileus hemionus,42998,42998,1
+2630,2018,Staney,den,Odocoileus hemionus,2316,2316,1
+2633,2018,Staney,den,Odocoileus hemionus,22368,22368,1
+2634,2018,Staney,den,Odocoileus hemionus,2657,2657,1
+2635,2018,Staney,den,Odocoileus hemionus,32606,32606,1
+2636,2018,Staney,den,Odocoileus hemionus,108587,108587,1
+2637,2018,Staney,den,Odocoileus hemionus,16118,16118,1
+2639,2018,Staney,den,Odocoileus hemionus,29135,29135,1
+2643,2018,Staney,den,Odocoileus hemionus,17014,17014,1
+2644,2018,Staney,den,Odocoileus hemionus,7292,7292,1
+2646,2018,Staney,den,Odocoileus hemionus,19461,19461,1
+2648,2018,Staney,den,Odocoileus hemionus,5390,5390,1
+2651,2018,Staney,den,Odocoileus hemionus,795,795,1
+2653,2018,Old Franks,den,Odocoileus hemionus,4218,4218,1
+2654,2018,Old Franks,den,Odocoileus hemionus,6241,7000,0.891571429
+2654,2018,Old Franks,den,Ursus americanus,759,7000,0.108428571
+2655,2018,Old Franks,den,Odocoileus hemionus,17856,17856,1
+2656,2018,Old Franks,den,Odocoileus hemionus,18156,18156,1
+2657,2018,Old Franks,den,Odocoileus hemionus,15703,15703,1
+2658,2018,Old Franks,den,Odocoileus hemionus,17969,17969,1
+2659,2018,Old Franks,den,Odocoileus hemionus,9701,9701,1
+2660,2018,Old Franks,den,Odocoileus hemionus,25621,25621,1
+2662,2018,Old Franks,den,Odocoileus hemionus,25078,25078,1
+2800,2020,Snow Pass,annual,Odocoileus hemionus,3165,3165,1
+2801,2020,Snow Pass,annual,Enhydra lutris,7114,7375,0.964610169
+2801,2020,Snow Pass,annual,Peromyscus keeni,261,7375,0.035389831
+2802,2020,Snow Pass,annual,Cottidae sp.,308,308,1
+2803,2020,Snow Pass,annual,Neovison vison,9870,9870,1
+2804,2020,Snow Pass,annual,Lontra canadensis,54112,54112,1
+2806,2020,Snow Pass,annual,Castor canadensis,37574,37574,1
+2807,2020,Snow Pass,annual,Odocoileus hemionus,13315,13315,1
+2808,2020,Snow Pass,annual,Lontra canadensis,11057,11057,1
+2809,2020,Snow Pass,annual,Lontra canadensis,15937,15937,1
+2810,2020,Snow Pass,annual,Lontra canadensis,10441,10441,1
+2811,2020,Snow Pass,annual,Neovison vison,848,66660,0.012721272
+2811,2020,Snow Pass,annual,Odocoileus hemionus,65100,66660,0.97659766
+2811,2020,Snow Pass,annual,Phoca vitulina,712,66660,0.010681068
+2812,2020,NA,NA,Odocoileus hemionus,4513,4513,1
+2813,2020,NA,NA,Odocoileus hemionus,45664,45664,1
+2815,2020,Snow Pass,annual,Odocoileus hemionus,769,769,1
+2816,2020,Snow Pass,annual,Lontra canadensis,25838,25838,1
+2817,2020,Snow Pass,annual,Odocoileus hemionus,4886,4886,1
+2818,2020,Snow Pass,annual,Castor canadensis,1096,1096,1
+2820,2020,Snow Pass,annual,Castor canadensis,58786,58786,1
+2822,2020,Honker,annual,Odocoileus hemionus,6090,6090,1
+2823,2021,Trocadero,annual,Odocoileus hemionus,26997,26997,1
+2824,2021,Trocadero,annual,Odocoileus hemionus,24289,24289,1
+2825,2021,Trocadero,annual,Odocoileus hemionus,40251,40251,1
+2827,2021,Trocadero,annual,Odocoileus hemionus,17080,17080,1
+2828,2021,Snow Pass,annual,Enhydra lutris,657,657,1
+2829,2021,Snow Pass,annual,Enhydra lutris,460,460,1
+2830,2021,Snow Pass,annual,Odocoileus hemionus,8121,8121,1
+2831,2021,Staney,annual,Odocoileus hemionus,27253,27253,1
+2832,2021,Snow Pass,annual,Odocoileus hemionus,1568,1568,1
+2833,2020,Snow Pass,annual,Odocoileus hemionus,55272,55272,1
+2834,2021,Snow Pass,annual,Odocoileus hemionus,9940,9940,1
+2838,2017,Hydaburg,den,Odocoileus hemionus,726,3907,0.185820322
+2838,2017,Hydaburg,den,Castor canadensis,3181,3907,0.814179678
+2839,2017,Hydaburg,den,Odocoileus hemionus,7512,7512,1
+2840,2017,Hydaburg,den,Odocoileus hemionus,42,303,0.138613861
+2840,2017,Hydaburg,den,Castor canadensis,261,303,0.861386139
+2842,2017,Old Franks,den,Odocoileus hemionus,15200,15200,1
+2843,2016,Sandy Beach,den,Odocoileus hemionus,43751,47892,0.91353462
+2843,2016,Sandy Beach,den,Melospiza melodia,1414,47892,0.029524764
+2843,2016,Sandy Beach,den,Mictrotus sp.,2727,47892,0.056940616
+2844,2016,Hydaburg,den,Odocoileus hemionus,16732,16732,1
+2845,2016,Ratz,den,Odocoileus hemionus,18403,18403,1
+2848,2016,Ratz,den,Odocoileus hemionus,26961,26961,1
+2851,2016,Ratz,den,Odocoileus hemionus,58367,58367,1

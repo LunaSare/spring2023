@@ -1,0 +1,107 @@
+---
+title: "Tree join and viz"
+author: "Luna L Sanchez Reyes"
+date: "2023-04-27"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(BiocManager)
+library(ggtree)
+library(ape)
+```
+
+## The package `ggtree` is on Bioconductor
+
+There are a coupel of databases for hosting biological software in R, the most famous one is CRAN, but another very reliable one is called BioConductor.
+
+When we are installing packages from CRAN, we use the function install.packages().
+To install packages from Bioconductor, we use a function form an R package that is called `BiocManager` with the code `install.packages("BiocManager")`
+
+Once that this package is installed, we can use one of its functions that is called `install()` to install packages from Bioconductor directly: `install("ggtree")`
+If you get the following error:
+```
+Error: package or namespace load failed for ‘ggtree’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ there is no package called ‘aplot’
+```
+You will need to install another package with `install.packages("aplot")`
+
+
+Exercise 1
+Download this phylogenetic tree of species from the Portal Project Teaching Database, by clicking on the link and saving it to your data-raw folder.
+
+Open the file by clicking on its name on the Files tab of RStudio’s Plots pane. It should look like this:
+
+Read the file using a function from the ape pakage
+
+```{r}
+portal_tree <- read.tree(file = "../data-raw/portal-tree.tre")
+portal_tree
+```
+
+Use the main function of the package ggtree (it is also called ggtree()) to visualize portal-tree.tre:
+
+```{r}
+ggtree(portal_tree)
+```
+```{r fig.height = 10, fig.width=7}
+plot.phylo(portal_tree, cex = 0.5)
+```
+
+
+### The structure of a tree in R
+
+We have an object that we named `portal_tree`, how do we explore its structure? The `str()` function is a great option
+```{r}
+str(portal_tree)
+```
+
+What is the class and length of this object:
+```{r}
+class(portal_tree)
+```
+
+Homework:How would you define a `phylo` object class based on its structure?
+
+
+## Joining a tree and a data table
+
+Download the portal species taxonomy and read it
+
+```{r}
+taxonomy <- read.csv("../data-raw/portal-species-taxonomy.csv")
+head(taxonomy)
+```
+
+What types of functions you would use to joining 2 tables?
+Functions from the `dplyr` package allow us to do that, for example `inner_join()`
+
+```{r}
+library(dplyr)
+surveys <- read.csv(file = "../data-raw/surveys.csv")
+species <- read.csv(file = "../data-raw/species.csv")
+colnames(surveys)
+colnames(species)
+# we can use a function that will match the vcalues of tw vectors ot tell us which ones are present in the two:
+intersect(colnames(surveys), colnames(species))
+joined <- inner_join(surveys, species, by = "species_id")
+head(joined)
+```
+
+Apply the same concept to join a phylogeetic tree and a table; the only difference is that we can't do inner_join, we can only do a left join:
+
+```{r error = TRUE}
+left_join(portal_tree, taxonomy, by = "label")
+```
+
+
+
+
+
+
+
+
+
+
+

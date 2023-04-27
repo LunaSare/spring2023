@@ -160,7 +160,7 @@ Use the ott ids for all families to get an induced subtree:
 tol_induced_subtree(ott_ids = amphibian_families$Amphibia$ott_id) -> amp_fam_subtree
 amp_fam_subtree
 ```
-```{r, fig.height= 20}
+```{r, fig.height= 10, fig.width=7}
 plot.phylo(amp_fam_subtree)
 ```
 

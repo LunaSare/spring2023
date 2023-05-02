@@ -1,0 +1,49 @@
+---
+title: "Creating an R data package"
+author: "Luna L Sanchez Reyes"
+date: "2023-04-27"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(usethis)
+```
+
+## Creating a new repository locally as an R package
+
+With RStudio:
+1. Click option to create a new project
+2. Create a New directory
+3. Choose create an R package
+4. Give a name to the package
+5. Click on `create in new session`
+
+Once we have a backbone for an R package, start customizing it
+- Modifying the DESCRIPTION file
+- This files contains the metadata of the package
+Metadata is "data about data", it contains the information about a data set.
+
+- License GPL (>=2) is the most common for data packages
+- Say something about the particularities of a GPL license
+- Our package will only depend on R itself for now, that is no other packages 
+  - It can be the latest version of R or any version that we are using
+
+
+### Add a README file
+
+Use a new package that is called `usethis`
+
+```{r, eval = FALSE}
+install.packages("usethis")
+library(usethis)
+```
+The function `use_readme_md()` create a template for a README file in markdown
+```{r}
+use_readme_md()
+```
+
+
+
+
+

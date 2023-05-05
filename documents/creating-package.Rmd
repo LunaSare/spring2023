@@ -153,3 +153,64 @@ git push -u origin main
 ```
 Hopefully everything ran smoothly and now you have a remote copy of your R package on GitHub.
 
+---
+
+## Building a website for an R package
+
+We will use the `pkgdown` package.
+But first we need to activate the use of pkgdown in our repository with `use_pkgdown()` from the package `usethis`:
+
+```{r, eval = FALSE}
+install.packages("pkgdown")
+library(usethis)
+use_pkgdown()
+```
+
+```{r eval = FALSE}
+library(pkgdown)
+build_site()
+```
+
+### Customize the website
+
+Open the file `_pkgdown.yml`.
+Add the following line to the end, make sure it is indented:
+```
+  bootswatch: materia
+```
+
+Run `build_site()` again. The website should pop up on your preferred web browser. Note that this is just a local copy of your website.
+
+To make it public, you have to `git add`, `git commit` and `git push` everything.
+After a few minutes, you will see the updated version of the website on your GitHub page.
+
+
+### Adding vignettes to your package
+
+Vignettes are Rmd files that have information on how to use the package.
+To create a new one from scratch we use the function `use_vignette()` form the package `usethis`
+
+```{r eval = FALSE}
+use_vignette(name = "intro")
+```
+
+Add some content to the Rmd file and hit `knit` to make sure it renders properly.
+
+Run `build_site()` again. Now you can see that the vignette is in the  `Articles` dropdown menu of your website.
+
+`git add`, `git commit` and `git push` to see the updated website online.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
